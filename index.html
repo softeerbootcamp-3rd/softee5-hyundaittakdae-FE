@@ -6,7 +6,19 @@
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/css/star.css" />
     <script defer src="/js/star.js"></script>
+    <script defer src="/js/toast.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>냉장고를 부탁해</title>
   </head>
   <body>
@@ -25,6 +37,7 @@
             max="10"
           />
         </span>
+        <button onclick="Toast('토스트 출력')">토스트</button>
       </div>
     </div>
   </body>
