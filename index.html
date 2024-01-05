@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/css/star.css" />
+    <script defer src="/js/star.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>냉장고를 부탁해</title>
   </head>
@@ -11,6 +13,18 @@
     <div id="mobileWrapper">
       <div id="app">
         <a href="detail">ddd</a>
+        <span class="star">
+          ★★★★★
+          <span>★★★★★</span>
+          <input
+            type="range"
+            oninput="drawStar(this)"
+            value="1"
+            step="1"
+            min="0"
+            max="10"
+          />
+        </span>
       </div>
     </div>
   </body>
