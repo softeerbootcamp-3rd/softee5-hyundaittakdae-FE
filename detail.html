@@ -2,10 +2,106 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/css/detail.css" />
+    <script defer src="/js/components/back.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>휴게소를 부탁해</title>
   </head>
   <body>
-    test
+    <div id="mobileWrapper">
+      <div id="app">
+        <div id="bannerCover">
+          <img id="backWhite" src="/assets/img/whiteBack.png" />
+
+          <div id="bannerInfoWrapper">
+            <div id="storeDis">
+              <img
+                src="/assets/img/whiteGPS.png"
+                style="width: 16px; padding-right: 3px"
+              />1.4km
+            </div>
+            <div id="storeName">의왕청계간이 휴게소(판교방향)</div>
+            <div id="roadName">경부 고속도로 상행선</div>
+          </div>
+        </div>
+
+        <div id="sideMargin">
+          <div id="plusInfoWrapper">
+            <img
+              src="/assets/img/store.png"
+              style="width: 18px; height: 18px; margin-right: 4px"
+            />
+            <p id="plusInfo">수유실, 마트, 쉼터, 주유소, 주차 전체 101면</p>
+          </div>
+          <div id="sideBetween">
+            <button id="writeReviewBtn">
+              <img
+                src="/assets/img/pencil.png"
+                style="width: 16px; height: 16px; margin-right: 4px"
+              />후기작성
+            </button>
+            <button id="shareBtn">
+              <img
+                src="/assets/img/share.png"
+                style="width: 16px; height: 16px; margin-right: 4px"
+              />공유
+            </button>
+          </div>
+        </div>
+
+        <div id="grayLine" style="margin-top: 22px"></div>
+        <div id="sidePadding" style="background-color: var(--150)">
+          <div id="reviewCount">
+            이용자 후기
+            <p id="reviewCountValue">299개</p>
+          </div>
+          <div id="totalScoreBox">
+            <div id="scoreBox">
+              <div id="graySemi">전체 평점</div>
+              <div style="color: var(--mainColor); margin: 0 10px">|</div>
+              <div id="totalScore">5.0</div>
+            </div>
+            <div id="starBox" style="margin-right: 15px">
+              <img id="smallStar" src="/assets/img/mainStar.png" />
+              <img id="smallStar" src="/assets/img/mainStar.png" />
+              <img id="smallStar" src="/assets/img/mainStar.png" />
+              <img id="smallStar" src="/assets/img/mainStar.png" />
+              <img id="smallStar" src="/assets/img/mainStar.png" />
+            </div>
+          </div>
+          <div id="themeBoxWrapper">
+            <div id="themeBox">
+              <div id="graySemi">이런 점이 좋아요</div>
+              <div style="display: flex">
+                <img
+                  id="bigStar"
+                  src="/assets/img/mainStar.png"
+                  style="margin-right: 4px"
+                />
+                <div class="themeScore">4.3</div>
+              </div>
+              <div id="goodTag">"음식이 다양해요"</div>
+            </div>
+            <div id="themeBox">
+              <div id="graySemi">이런 점이 아쉬워요</div>
+              <div style="display: flex">
+                <img
+                  id="bigStar"
+                  src="/assets/img/mainStar.png"
+                  style="margin-right: 4px"
+                />
+                <div class="themeScore">1.2</div>
+              </div>
+              <div id="badTag">"화장실이 더러워요"</div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="background-color: var(--100); width: 100%; height: 8px"
+        ></div>
+      </div>
+    </div>
   </body>
 </html>

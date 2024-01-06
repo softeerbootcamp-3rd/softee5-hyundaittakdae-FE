@@ -36,6 +36,8 @@
 :root {
   --mainColor: #6ccae1;
   --white: #ffffff;
+  --100: #eff0f5;
+  --150: #f7f8fa;
   --200: #e0e4ec;
   --300: #c2c5cf;
   --400: #999ba5;
@@ -89,6 +91,10 @@ input {
 #sideMargin {
   width: calc(100%-32px);
   margin: 0 16px;
+}
+#sidePadding {
+  width: calc(100%-32px);
+  padding: 0 16px;
 }
 
 #sideBetween {
@@ -188,4 +194,21 @@ select {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+#smallStar {
+  width: 14.365px;
+  height: 14px;
+  margin: 2px;
+}
+
+#bigStar {
+  width: 22px;
+  height: 22px;
+  padding-top: 5px;
+}
+
+#starBox {
+  width: auto;
+  display: flex;
 }
