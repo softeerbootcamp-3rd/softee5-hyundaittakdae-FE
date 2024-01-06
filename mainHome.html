@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/css/mainHome.css" />
+    <script defer src="/js/myLocation.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw1ZBbZLRARjidn3WHiKdlJThB3a-uGdE"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>휴게소를 부탁해</title>
+  </head>
+  <body>
+    <div id="mobileWrapper">
+      <div id="app">
+        <div
+          id="sideMarginBetween"
+          style="margin-top: 16px; margin-bottom: 16px"
+        >
+          <div id="curPlaceName">현재 위치 불러오는중</div>
+          <div
+            id="callMyPlaceBtn"
+            style="display: flex; width: 56px; justify-content: space-between"
+          >
+            <img
+              style="width: 15px; height: 15px; margin-top: 2px"
+              src="/assets/img/GPS.png"
+            />
+            <div style="font-size: 14px; color: rgba(128, 130, 229, 1)">
+              내위치
+            </div>
+          </div>
+        </div>
+        <div id="grayLine" />
+        <div id="sideMargin">
+          <button id="lineBtn">먹는 메뉴도 평가할래요</button>
+          <button id="fillBtn">이대로 후기 등록할래요</button>
+          <button id="disabledBtn">이대로 후기 등록할래요</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
