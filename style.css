@@ -173,3 +173,19 @@ select {
   border: 0.79px solid var(--200);
   border-radius: 4px;
 }
+
+/* 상단바 */
+#bigTitle {
+  font-family: "Semibold";
+  font-size: 14px;
+  text-align: center;
+  padding-left: 10px;
+  padding-top: 12px;
+  position: relative;
+}
+
+#back {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
