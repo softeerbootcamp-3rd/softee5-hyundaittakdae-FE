@@ -149,7 +149,6 @@ select {
   color: var(--mainColor);
   border: 0.79px solid var(--mainColor);
   border-radius: 4px;
-  margin: 3px 0;
 }
 
 #fillBtn {
@@ -161,7 +160,6 @@ select {
   color: var(--white);
   border: 0.79px solid var(--mainColor);
   border-radius: 4px;
-  margin: 3px 0;
 }
 
 #disabledBtn {
@@ -173,5 +171,4 @@ select {
   color: var(--white);
   border: 0.79px solid var(--200);
   border-radius: 4px;
-  margin: 3px 0;
 }
