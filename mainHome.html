@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/css/mainHome.css" />
+    <link rel="stylesheet" href="/css/dropdown.css" />
     <script defer src="/js/myLocation.js"></script>
+    <script defer src="/js/components/dropdown.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw1ZBbZLRARjidn3WHiKdlJThB3a-uGdE"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,9 +35,10 @@
         </div>
         <div id="grayLine" />
         <div id="sideMargin">
-          <button id="lineBtn">먹는 메뉴도 평가할래요</button>
-          <button id="fillBtn">이대로 후기 등록할래요</button>
-          <button id="disabledBtn">이대로 후기 등록할래요</button>
+          <div class="dropdown">
+            <button id="dropDownBtn">메뉴를 선택해주세요</button>
+            <div style="display: none" id="drop-content"></div>
+          </div>
         </div>
       </div>
     </div>
