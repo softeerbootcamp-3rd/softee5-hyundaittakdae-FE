@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/css/mainHome.css" />
+    <link rel="stylesheet" href="/css/dropdown.css" />
+    <script defer src="/js/myLocation.js"></script>
+    <script defer src="/js/components/back.js"></script>
+    <script defer src="/js/components/dropdown.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw1ZBbZLRARjidn3WHiKdlJThB3a-uGdE"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>휴게소를 부탁해</title>
+  </head>
+  <body>
+    <div id="mobileWrapper">
+      <div id="app">
+        <div id="bigTitle">
+          <img
+            id="back"
+            src="/assets/img/backArrow.png"
+            style="width: 24px; height: 24px"
+          />
+          휴게소 후기 등록
+        </div>
+        <div
+          id="sideMarginBetween"
+          style="margin-top: 16px; margin-bottom: 16px"
+        >
+          <div id="curPlaceName">현재 위치 불러오는중</div>
+          <div
+            id="callMyPlaceBtn"
+            style="display: flex; width: 56px; justify-content: space-between"
+          >
+            <img
+              style="width: 15px; height: 15px; margin-top: 2px"
+              src="/assets/img/GPS.png"
+            />
+            <div style="font-size: 14px; color: rgba(128, 130, 229, 1)">
+              내위치
+            </div>
+          </div>
+        </div>
+        <div id="grayLine" />
+        <div id="sideMargin">
+          <div class="dropdown">
+            <button id="dropDownBtn">메뉴를 선택해주세요</button>
+            <div style="display: none" id="drop-content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
