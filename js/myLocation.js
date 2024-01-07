@@ -20,18 +20,20 @@ function showPosition(position) {
   geocoder.geocode({ latLng: latlng }, function (results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
       if (results[1]) {
-        // 가져온 위치 정보를 div에 넣기
         var addressComponents = results[1].address_components;
-        var city = getAddressComponent(
-          addressComponents,
-          "administrative_area_level_1"
-        );
-        var district = getAddressComponent(
-          addressComponents,
-          "sublocality_level_2"
-        );
+        console.log(addressComponents);
+        var city = addressComponents[1].long_name;
+        var district = addressComponents[2].long_name;
+        if (addressComponents.length === 3) {
+          city = addressComponents[0].long_name;
+          district = addressComponents[1].long_name;
+        } else if (addressComponents.length === 6) {
+          city = addressComponents[3].long_name;
+          district = addressComponents[2].long_name;
+        }
+
         document.getElementById("curPlaceName").innerText =
-          city + " " + district;
+          city + " " + district + " 인근";
       }
     } else {
       console.error("Geocoder failed due to: " + status);

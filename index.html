@@ -3,20 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/css/star.css" />
-    <script defer src="/js/star.js"></script>
-    <script defer src="/js/toast.js"></script>
-    <script defer src="/js/select.js"></script>
-    <script defer src="/js/btn.js"></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
-    />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/toastify-js"
-    ></script>
+    <link rel="stylesheet" href="/css/mainHome.css" />
+    <script defer src="/js/myLocation.js"></script>
+    <script defer src="/js/pages/main/choiceTheme.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw1ZBbZLRARjidn3WHiKdlJThB3a-uGdE"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -25,23 +15,87 @@
   <body>
     <div id="mobileWrapper">
       <div id="app">
-        <a href="detail">ddd</a>
-        <span class="star">
-          ★★★★★
-          <span>★★★★★</span>
-          <input
-            type="range"
-            oninput="drawStar(this)"
-            value="1"
-            step="1"
-            min="0"
-            max="10"
-          />
-        </span>
-        <button onclick="Toast('토스트 출력')">토스트</button>
+        <div
+          id="sideMarginBetween"
+          style="margin-top: 16px; margin-bottom: 17px; align-items: center"
+        >
+          <div style="display: flex">
+            <img
+              id="smallImg"
+              src="/assets/img/location.png"
+              style="margin-right: 4px; margin-top: 2px"
+            />
+            <div id="curPlaceName">현재 위치 불러오는중</div>
+          </div>
+          <div
+            id="callMyPlaceBtn"
+            style="display: flex; width: 56px; justify-content: space-between"
+          >
+            <img
+              style="width: 15px; height: 15px; margin-top: 2px"
+              src="/assets/img/GPS.png"
+            />
+            <div
+              style="
+                font-size: 14px;
+                color: rgba(128, 130, 229, 1);
+                font-family: 'Semibold';
+              "
+            >
+              내위치
+            </div>
+          </div>
+        </div>
+        <div id="grayLine" style="margin-bottom: 24px"></div>
+        <div id="sideMargin">
+          <div id="heading3bold">나와 가까운 휴게소 목록</div>
+          <div id="grayBox">
+            <img
+              id="basicImg"
+              src="/assets/img/mainColorCheck.png"
+              style="margin-right: 4px"
+            />
+            <div id="body2semibold">
+              내 위치에서 100km 반경 내에 있는 휴게소를 보여드려요
+            </div>
+          </div>
+        </div>
+        <div id="choiceThemeWrapper">
+          <div id="choiceTheme">모든 휴게소</div>
+          <div id="unChoiceTheme">
+            음식이 맛있어요
+            <img
+              id="basicImg"
+              src="/assets/img/grayThumb.png"
+              style="margin-left: 4px"
+            />
+          </div>
 
-        <a href="/mainHome.html">메인 홈으로 이동</a>
-        <a href="/detail.html">detail로 이동</a>
+          <div id="unChoiceTheme">
+            화장실이 깨끗해요
+            <img
+              id="basicImg"
+              src="/assets/img/grayThumb.png"
+              style="margin-left: 4px"
+            />
+          </div>
+          <div id="unChoiceTheme">
+            시설이 편리해요
+            <img
+              id="basicImg"
+              src="/assets/img/grayThumb.png"
+              style="margin-left: 4px"
+            />
+          </div>
+          <div id="unChoiceTheme">
+            분위기가 좋아요
+            <img
+              id="basicImg"
+              src="/assets/img/grayThumb.png"
+              style="margin-left: 4px"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </body>

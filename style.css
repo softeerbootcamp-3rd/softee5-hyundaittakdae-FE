@@ -49,6 +49,18 @@
   --900: #1a1a1a;
 }
 
+#heading3bold {
+  color: var(--700, #32323b);
+  font-family: "Bold";
+  font-size: 18px;
+}
+
+#body2semibold {
+  color: var(--500);
+  font-family: "Semibold";
+  font-size: 12px;
+}
+
 a {
   text-decoration: none;
 }
@@ -231,4 +243,9 @@ select {
 #basicImg {
   width: 16px;
   height: 16px;
+}
+
+#smallImg {
+  width: 14px;
+  height: 14px;
 }

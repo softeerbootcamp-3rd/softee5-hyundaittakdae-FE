@@ -1,5 +1,63 @@
 #curPlaceName {
   width: fit-content;
-  font-family: "Bold";
+  font-family: "Semibold";
+  font-size: 14px;
+  color: var(--700);
+  font-size: 14px;
+}
+
+#grayBox {
+  width: calc(100% - 9px);
+  height: 34px;
+  border-radius: 4px;
+  background: var(--100);
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  padding-left: 9px;
+}
+
+#choiceThemeWrapper {
+  width: calc(100%+52px);
+  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-top: 16px;
+  padding-left: 16px;
+}
+
+#choiceThemeWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+#choiceTheme {
+  width: fit-content;
+  padding: 9px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: var(--mainColor);
+  margin-left: 4px;
+  color: var(--white);
+  font-family: "Semibold";
+  font-size: 14px;
+}
+
+#unChoiceTheme {
+  width: fit-content;
+  padding: 9px 12px;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  border: 0.75px solid var(--200, #e0e4ec);
+  background: var(--white);
+  margin-left: 4px;
+  color: var(--400);
+  font-family: "Semibold";
   font-size: 14px;
 }

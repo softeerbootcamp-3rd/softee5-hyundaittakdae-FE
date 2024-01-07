@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/css/detail.css" />
+    <link rel="stylesheet" href="/css/detailTest.css" />
     <script defer src="/js/components/back.js"></script>
     <script defer src="/js/pages/detail/share.js"></script>
     <script defer src="/js/pages/detail/storeListUp.js"></script>
@@ -15,9 +15,11 @@
   <body>
     <div id="mobileWrapper">
       <div id="app">
-        <div id="bannerCover">
-          <img id="backWhite" src="/assets/img/whiteBack.png" />
+        <div id="bannerCover"></div>
 
+        <div id="sideMargin"></div>
+
+        <div id="glassBox">
           <div id="bannerInfoWrapper">
             <div id="storeDis">
               <img
@@ -28,9 +30,6 @@
             <div id="storeName">의왕청계간이 휴게소(판교방향)</div>
             <div id="roadName">경부 고속도로 상행선</div>
           </div>
-        </div>
-
-        <div id="sideMargin">
           <div id="plusInfoWrapper">
             <img
               src="/assets/img/store.png"
@@ -55,7 +54,10 @@
         </div>
 
         <div id="grayLine" style="margin-top: 22px"></div>
-        <div id="sidePadding" style="background-color: var(--150)">
+        <div
+          id="sidePadding"
+          style="background-color: var(--150); margin-top: 100px"
+        >
           <div id="reviewCount">
             이용자 후기
             <p id="reviewCountValue">299개</p>
