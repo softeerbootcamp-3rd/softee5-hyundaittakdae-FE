@@ -31,6 +31,7 @@
   margin: 0;
   padding: 0;
   font-family: "Regular";
+  font-size: 16px;
 }
 
 :root {
@@ -46,18 +47,6 @@
   --700: #32323b;
   --800: #202026;
   --900: #1a1a1a;
-}
-
-#mobileWrapper {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  background-color: black;
-  height: 900px;
-  display: flex;
-  justify-content: center;
-  background-color: black;
 }
 
 a {
@@ -78,6 +67,18 @@ input {
   }
 }
 
+#mobileWrapper {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  height: 1900px;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
 #app {
   background-color: #ffffff;
   color: black;
@@ -85,7 +86,7 @@ input {
   overflow-y: hidden;
   width: 390px;
   min-width: 360px;
-  height: 900px;
+  height: 1900px;
 }
 
 #sideMargin {
@@ -218,4 +219,16 @@ select {
   color: var(--600);
   font-family: "Semibold";
   font-size: 16px;
+}
+
+#mediumImg {
+  border-radius: 8px;
+  width: 76px;
+  height: 76px;
+}
+
+/*16px로 보통 사용하는 아이콘 사이즈*/
+#basicImg {
+  width: 16px;
+  height: 16px;
 }

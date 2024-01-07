@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/css/detail.css" />
     <script defer src="/js/components/back.js"></script>
+    <script defer src="/js/pages/detail/share.js"></script>
+    <script defer src="/js/pages/detail/storeListUp.js"></script>
+    <script defer src="/js/pages/detail/menuListUp.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>휴게소를 부탁해</title>
   </head>
@@ -101,11 +104,52 @@
         <div
           style="background-color: var(--100); width: 100%; height: 8px"
         ></div>
-        <div id="sideMargin" style="margin-top: 24px">
+        <div id="sideMargin" style="margin-top: 24px; padding-bottom: 4px">
           <div id="sideBetween">
             <div id="titleFont">휴게소 식당 메뉴</div>
-            <div id="graySemi">별점순</div>
+            <div
+              style="
+                font-family: Semibold;
+                font-size: 10px;
+                color: var(--400);
+                padding-top: 4px;
+              "
+            >
+              * 별점이 높은 메뉴부터 표시됩니다
+            </div>
           </div>
+        </div>
+        <div
+          id="storeSideBar"
+          style="margin-top: 14px; padding-left: 6px"
+        ></div>
+        <div id="grayLine"></div>
+        <div id="sideMargin" style="margin-top: 20px">
+          <div id="menuBox" style="margin-bottom: 24px">
+            <img id="mediumImg" src="/assets/img/exFoodImg.png" />
+            <div id="menuInfoWrapper">
+              <div id="menuName">
+                매운 마제소바+돈카츠+냉면 소바+공기밥세+매운
+                마제소바+돈카츠+냉면 소바+공기밥세+매운 마제소바+돈카츠+냉면
+                소바+공기밥세
+              </div>
+              <div id="sideBetween" style="margin-top: 8px">
+                <div style="display: flex">
+                  <img
+                    id="basicImg"
+                    src="/assets/img/mainStar.png"
+                    style="margin-right: 4px; margin-top: 2px"
+                  />
+                  <div id="menuScore">4.8</div>
+                </div>
+                <div id="menuPrice" style="display: flex">
+                  8,0000
+                  <div>원</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="menuListUpWrapper"></div>
         </div>
       </div>
     </div>
