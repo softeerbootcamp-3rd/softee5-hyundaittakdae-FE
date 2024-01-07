@@ -212,3 +212,10 @@ select {
   width: auto;
   display: flex;
 }
+
+/*자주 사용하는 퐅트 CSS*/
+#titleFont {
+  color: var(--600);
+  font-family: "Semibold";
+  font-size: 16px;
+}
