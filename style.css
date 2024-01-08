@@ -10,19 +10,19 @@
 
 @font-face {
   font-family: "Semibold";
-  src: url(/assets/fonts/Pretendard-Regular.woff) format("woff");
+  src: url(/assets/fonts/Pretendard-Medium.woff) format("woff");
   font-weight: 600;
 }
 
 @font-face {
   font-family: "Medium";
-  src: url(/assets/fonts/Pretendard-Medium.woff) format("woff");
+  src: url(/assets/fonts/Pretendard-Regular.woff) format("woff");
   font-weight: 500;
 }
 
 @font-face {
   font-family: "Regular";
-  src: url(/assets/fonts/Pretendard-Regular.woff) format("woff");
+  src: url(/assets/fonts/Pretendard-Light.woff) format("woff");
   font-weight: 400;
 }
 
@@ -61,6 +61,18 @@
   font-size: 12px;
 }
 
+#body1semibold {
+  color: #989aa9;
+  font-family: "Semibold";
+  font-size: 14px;
+}
+
+#body1semibold {
+  color: var(--600);
+  font-family: "Semibold";
+  font-size: 14px;
+}
+
 a {
   text-decoration: none;
 }
@@ -96,7 +108,7 @@ input {
   color: black;
   overflow-x: hidden;
   overflow-y: hidden;
-  width: 390px;
+  width: 360px;
   min-width: 360px;
   height: auto;
 }

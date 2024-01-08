@@ -14,7 +14,7 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 390px;
+  width: 360px;
   height: 270px;
   opacity: 0.9;
   background: linear-gradient(
@@ -39,6 +39,18 @@
   padding-top: 24px;
   padding-left: 20px;
   padding-right: 20px;
+  z-index: 99;
+}
+
+#shadowingSection {
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 360px;
+  height: 30px;
+  backdrop-filter: blur(3px);
+  z-index: 0;
 }
 
 #backWhite {
@@ -125,14 +137,12 @@
 #totalScoreBox {
   width: 100%;
   height: 44px;
-  border-radius: 4px;
-  border: 1px solid rgba(108, 202, 225, 0.2);
+  border-radius: 8px;
+  border: 1px solid rgba(108, 202, 225, 0.4);
   background: var(--white);
 }
 
 #reviewCount {
-  padding-top: 24px;
-  padding-bottom: 14px;
   color: var(--600);
   font-family: "Semibold";
   font-size: 16px;
@@ -140,9 +150,9 @@
 }
 #reviewCountValue {
   font-family: "Semibold";
-  font-size: 16px;
+  font-size: 14px;
   color: var(--400);
-  margin-left: 8px;
+  margin-left: 2px;
 }
 
 #totalScoreBox {
@@ -167,7 +177,7 @@
 #totalScore {
   font-family: "Semibold";
   font-size: 14px;
-  color: var(--mainColor);
+  color: var(--600);
 }
 #themeBoxWrapper {
   width: 100%;
@@ -178,17 +188,64 @@
 }
 
 #themeBox {
-  width: 48.3%;
-  height: 94px;
-  border-radius: 4px;
-  border: 1px solid rgba(108, 202, 225, 0.2);
+  width: 100%;
+  height: 181px;
+  border-radius: 8px;
+  border: 1px solid rgba(108, 202, 225, 0.4);
   background: var(--white);
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+#themeEachBox {
+  width: 146px;
+  height: 80px;
+  padding: 0 4px;
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#themeGoodBox {
+  width: 146px;
+  height: 125px;
+  border-radius: 8px;
+  background: rgba(108, 202, 225, 0.2);
+  margin-top: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  padding-bottom: 17px;
-  padding-top: 18px;
+}
+
+#themeBadBox {
+  width: 146px;
+  height: 125px;
+  border-radius: 8px;
+  background: var(--100);
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#themeScoreBox {
+  width: 50px;
+  height: 22px;
+  border-radius: 100px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#smallThemeScore {
+  color: var(--600);
+  text-align: center;
+  font-family: "Semibold";
+  font-size: 12px;
 }
 
 .themeScore {
@@ -196,6 +253,16 @@
   font-family: "Semibold";
   font-size: 22px;
   margin-top: 3 px;
+}
+
+#badThemeCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: var(--200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #goodTag {

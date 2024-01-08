@@ -36,7 +36,7 @@ menuList.forEach((menu) => {
                   <img
                     id="basicImg"
                     src="/assets/img/mainStar.png"
-                    style="margin-right: 4px; margin-top: 2px"
+                    style="margin-right: 4px; margin-bottom: 2px"
                   />
                   <div id="menuScore">4.8</div>
                 </div>
