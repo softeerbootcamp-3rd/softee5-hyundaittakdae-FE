@@ -54,9 +54,7 @@ var logoUrlArr = {
 };
 
 var restAreaList = document.getElementById("restAreaList");
-RestAreaArr.forEach((data) => {
-  console.log(data.theme, logoUrlArr[data.theme]);
-  console.log(data);
+RestAreaArr.forEach((data, idx) => {
   var restAreaBox = document.createElement("div");
   restAreaBox.id = "restAreaBox";
   restAreaBox.innerHTML = `<div id="contentArea">
