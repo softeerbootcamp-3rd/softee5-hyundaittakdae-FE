@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   font-size: 32px;
-  color: #ddd;
+  color: var(--200);
 }
 
 .star input {
@@ -25,11 +25,8 @@
   pointer-events: none;
 }
 
-.realStar{
-
+.realStar {
   position: relative;
   bottom: 0%;
   display: flex;
-  
-
 }
