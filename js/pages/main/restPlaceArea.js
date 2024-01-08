@@ -9,7 +9,7 @@ var RestAreaArr = [
     totalScore: "3.8",
   },
   {
-    theme: "시설이 깨끗해요",
+    theme: "시설이 편리해요",
     themeScore: "3.8",
     restAreaName: "부평 휴게소(판교방향)",
     restAreaImg: "/assets/img/restPlace.png",
@@ -27,7 +27,7 @@ var RestAreaArr = [
     totalScore: "3.8",
   },
   {
-    theme: "음식이 맛있어요",
+    theme: "분위기가 좋아요",
     themeScore: "4.8",
     restAreaName: "의왕청계간이 휴게소(판교방향)",
     restAreaImg: "/assets/img/restPlace.png",
@@ -36,7 +36,7 @@ var RestAreaArr = [
     totalScore: "3.8",
   },
   {
-    theme: "음식이 맛있어요",
+    theme: "화장실이 깨끗해요",
     themeScore: "4.8",
     restAreaName: "의왕청계간이 휴게소(판교방향)",
     restAreaImg: "/assets/img/restPlace.png",
@@ -46,8 +46,16 @@ var RestAreaArr = [
   },
 ];
 
+var logoUrlArr = {
+  "음식이 맛있어요": "/assets/img/themeImg/mainColorFood.png",
+  "시설이 편리해요": "/assets/img/themeImg/mainColorPlace.png",
+  "화장실이 깨끗해요": "/assets/img/themeImg/mainColorBathroom.png",
+  "분위기가 좋아요": "/assets/img/themeImg/mainColorMood.png",
+};
+
 var restAreaList = document.getElementById("restAreaList");
 RestAreaArr.forEach((data) => {
+  console.log(data.theme, logoUrlArr[data.theme]);
   console.log(data);
   var restAreaBox = document.createElement("div");
   restAreaBox.id = "restAreaBox";
@@ -64,7 +72,7 @@ RestAreaArr.forEach((data) => {
   <div id="contentInfoWrapper">
     <div id="themeWrapper">
       <img
-        src="/assets/img/folk-knife-mainColor.png"
+        src="${logoUrlArr[data.theme]}"
         id="basicImg"
       />
       <p id="themeValue">${data.theme}</p>
