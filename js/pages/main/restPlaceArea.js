@@ -26,6 +26,24 @@ var RestAreaArr = [
     roadName: "경부 고속도로 상행선",
     totalScore: "3.8",
   },
+  {
+    theme: "음식이 맛있어요",
+    themeScore: "4.8",
+    restAreaName: "의왕청계간이 휴게소(판교방향)",
+    restAreaImg: "/assets/img/restPlace.png",
+    restAreaDis: "1.4km",
+    roadName: "경부 고속도로 상행선",
+    totalScore: "3.8",
+  },
+  {
+    theme: "음식이 맛있어요",
+    themeScore: "4.8",
+    restAreaName: "의왕청계간이 휴게소(판교방향)",
+    restAreaImg: "/assets/img/restPlace.png",
+    restAreaDis: "1.4km",
+    roadName: "경부 고속도로 상행선",
+    totalScore: "3.8",
+  },
 ];
 
 var restAreaList = document.getElementById("restAreaList");
