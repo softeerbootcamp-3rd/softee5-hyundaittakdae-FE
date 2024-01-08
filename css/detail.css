@@ -1,20 +1,46 @@
-#bannerCover {
-  width: 100%;
-  height: 196px;
-  background: linear-gradient(
-      180deg,
-      rgba(87, 144, 158, 0) -79.37%,
-      #4d93a4 100%
-    ),
-    url("/assets/img/restPlace.png");
-  background-size: cover; /* 배경 이미지 크기를 커버로 설정 */
-  overflow: hidden;
+#bannerImg {
   position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  height: 270px;
+  background: url("/assets/img/restPlace.png"),
+    lightgray -53.113px 0px / 129.507% 100% no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(0.25px);
 }
+
+#bannerImgWrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 390px;
+  height: 270px;
+  opacity: 0.9;
+  background: linear-gradient(
+    0deg,
+    rgba(90, 131, 179, 0.62) 0%,
+    rgba(90, 131, 179, 0.62) 100%
+  );
+}
+
+#glassBox {
+  position: absolute;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 288px;
+  height: 210px;
+  border-radius: 8px;
+  border: 0.75px solid var(--white);
+  background-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0px 1px 15px 0px rgba(119, 135, 147, 0.3);
+  backdrop-filter: blur(3px);
+  padding-top: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 #backWhite {
   width: 24px;
   height: 24px;
@@ -30,36 +56,40 @@
   margin-left: 16px;
 }
 #storeDis {
-  padding: 6px 8px;
-  width: fit-content;
   font-family: "Semibold";
-  font-size: 14px;
+  font-size: 12px;
   color: var(--white);
+}
+
+#storeDisWrapper {
+  padding: 5px 8px;
+  width: fit-content;
   display: flex;
-  border-radius: 114.282px;
-  background: #2a2a2a;
+  border-radius: 4px;
+  background: var(--700, #32323b);
   backdrop-filter: blur(28.6px);
 }
 
 #storeName {
   color: var(--white);
-  font-family: "Bold";
+  font-family: "Semibold";
   font-size: 18px;
-  margin: 12px 0;
+  margin-top: 11.75px;
+  margin-bottom: 7.8px;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 }
 #roadName {
   color: var(--white);
   font-size: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 #plusInfoWrapper {
   width: 100%;
   display: flex;
-  margin: 16px 0px;
 }
 
 #plusInfo {
-  color: var(--400);
+  color: var(--white);
   font-family: "Semibold";
   font-size: 14px;
 }
@@ -237,21 +267,23 @@
 #menuName {
   color: var(--500);
   font-family: "Regular";
-  font-size: 16px;
+  font-size: 15px;
   width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
   word-break: break-word;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
 
 #menuInfoWrapper {
   width: calc(100% - 88px);
-  height: 68px;
+  height: 52px;
   display: flex;
   flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
   flex-direction: column;
   justify-content: space-between;
 }

@@ -15,30 +15,36 @@
   <body>
     <div id="mobileWrapper">
       <div id="app">
-        <div id="bannerCover">
-          <img id="backWhite" src="/assets/img/whiteBack.png" />
-
-          <div id="bannerInfoWrapper">
-            <div id="storeDis">
-              <img
-                src="/assets/img/whiteGPS.png"
-                style="width: 16px; padding-right: 3px"
-              />1.4km
-            </div>
-            <div id="storeName">의왕청계간이 휴게소(판교방향)</div>
-            <div id="roadName">경부 고속도로 상행선</div>
-          </div>
+        <div id="bannerImg">
         </div>
-
-        <div id="sideMargin">
+        <img id="back" src="/assets/img/backArrowWhite.png" style="left: 16px; width: 24px; height: 24px; z-index: 50;"></img>
+        <div id="bannerImgWrapper"></div>
+        <div id="glassBox">
+          <div id="storeDisWrapper">
+            <img
+              src="/assets/img/whiteGPS.png"
+              style="width: 12px; height: 12px; padding-right: 3px; margin-top: 1px;"
+            /><div id="storeDis">1.4km</div>
+          </div>
+          <div id="storeName">의왕청계간이 휴게소(판교방향)</div>
+          <div id="roadName">경부 고속도로 상행선</div>
+          <div
+            id="grayLine"
+            style="
+              border-color: rgba(235, 235, 235, 0.5);
+              margin-bottom: 12.53px;
+            "
+          ></div>
           <div id="plusInfoWrapper">
             <img
               src="/assets/img/store.png"
               style="width: 18px; height: 18px; margin-right: 4px"
             />
-            <p id="plusInfo">수유실, 마트, 쉼터, 주유소, 주차 전체 101면</p>
+            <p id="plusInfo" style="padding-top: 1px">
+              수유실 | 마트 | 쉼터 | 주유소 | 주차 전체 101면
+            </p>
           </div>
-          <div id="sideBetween">
+          <div id="sideBetween" style="margin-top: 16px">
             <a href="/restAreaReview.html" id="writeReviewBtn">
               <img
                 src="/assets/img/pencil.png"
@@ -54,8 +60,10 @@
           </div>
         </div>
 
-        <div id="grayLine" style="margin-top: 22px"></div>
-        <div id="sidePadding" style="background-color: var(--150)">
+        <div
+          id="sidePadding"
+          style="background-color: var(--150); padding-top: 40px"
+        >
           <div id="reviewCount">
             이용자 후기
             <p id="reviewCountValue">299개</p>
@@ -105,17 +113,16 @@
           style="background-color: var(--100); width: 100%; height: 8px"
         ></div>
         <div id="sideMargin" style="margin-top: 24px; padding-bottom: 4px">
-          <div id="sideBetween">
+          <div id="sideBetween" style="align-items: center;">
             <div id="titleFont">휴게소 식당 메뉴</div>
             <div
               style="
                 font-family: Semibold;
-                font-size: 10px;
+                font-size: 13px;
                 color: var(--400);
-                padding-top: 4px;
               "
             >
-              * 별점이 높은 메뉴부터 표시됩니다
+              * 별점 높은 순 기준
             </div>
           </div>
         </div>

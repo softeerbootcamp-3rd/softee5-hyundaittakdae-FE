@@ -4,13 +4,13 @@
 /* 스타일 시스템은 root CSS와 이 파일 참고*/
 @font-face {
   font-family: "Bold";
-  src: url(/assets/fonts/Pretendard-Bold.woff) format("woff");
+  src: url(/assets/fonts/Pretendard-SemiBold.woff) format("woff");
   font-weight: 700;
 }
 
 @font-face {
   font-family: "Semibold";
-  src: url(/assets/fonts/Pretendard-SemiBold.woff) format("woff");
+  src: url(/assets/fonts/Pretendard-Regular.woff) format("woff");
   font-weight: 600;
 }
 
@@ -85,7 +85,7 @@ input {
   margin: 0;
   padding: 0;
   background-color: black;
-  height: 1900px;
+  height: auto;
   display: flex;
   justify-content: center;
   background-color: black;
@@ -98,7 +98,7 @@ input {
   overflow-y: hidden;
   width: 390px;
   min-width: 360px;
-  height: 1900px;
+  height: auto;
 }
 
 #sideMargin {
@@ -205,7 +205,7 @@ select {
 
 #back {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
 }
 
@@ -239,7 +239,12 @@ select {
   height: 76px;
 }
 
-/*16px로 보통 사용하는 아이콘 사이즈*/
+/*자주사용하는 아이콘 사이즈*/
+#bigImg {
+  width: 24px;
+  height: 24px;
+}
+
 #basicImg {
   width: 16px;
   height: 16px;
