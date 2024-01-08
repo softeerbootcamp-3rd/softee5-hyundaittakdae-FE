@@ -253,7 +253,7 @@ select {
 
 /*자주 사용하는 퐅트 CSS*/
 #titleFont {
-  color: var(--600);
+  color: var(--700);
   font-family: "Semibold";
   font-size: 16px;
 }
