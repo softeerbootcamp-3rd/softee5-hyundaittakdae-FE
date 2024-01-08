@@ -1,9 +1,33 @@
+
+const dataReceived = JSON.parse(localStorage.getItem('myData'));
+
+const submit = document.querySelector("#writeContinueBtn");
+
+if (dataReceived) {
+    // Use the data
+    console.log(dataReceived);
+} else {
+    console.log("not received");
+    // Handle the case where data is not available
+}
+
+
 var RestaurantList = ["풀초롱 밥상", "풀초롱 밥상머리 밥상", "쳐비스","asdasd","DSfsdf"];
+/// RestaurantList 는 가변 변수다.
+
+const SELECTED = [];
+
+var selectedJson = {
+    "selected" : SELECTED
+};
+
 
 
 const container = document.querySelector("#RestaurantList");
 const Modal = document.querySelector("#Modal");
 const inputBar = document.querySelector('.inputBar');
+const Star = document.getElementsByTagName("input");
+
 
 var curPos = 0;
 var prevPos = 0;
@@ -26,6 +50,16 @@ RestaurantList.forEach((item, index) => {
 
     singleBtn.addEventListener("click", (event)=>{
         var backgroundColor = window.getComputedStyle(event.target).backgroundColor;
+        if(SELECTED.includes(event.target.innerText)){
+            for(let i = 0; i < SELECTED.length; i++){
+                if(SELECTED[i] === event.target.innerText){
+                    SELECTED.splice(i,1);
+                }
+            }
+        }
+        else{
+            SELECTED.push(event.target.innerText);
+        }
         if(backgroundColor === gray){
 
             event.target.style.background = lightblue;
@@ -38,7 +72,12 @@ RestaurantList.forEach((item, index) => {
             event.target.style.color = "#999ba5";
             event.target.style.border = `0.79px solid #999ba5`;
         }
-        
+        selectedJson = {
+            "selected": SELECTED
+        };
+
+        console.log(selectedJson["selected"]);
+
 
     });
 
@@ -56,3 +95,21 @@ RestaurantList.forEach((item, index) => {
 const inputField = document.createElement('div');
 inputField.classList.add('inputBar');
 Modal.appendChild(inputField);
+
+
+
+submit.addEventListener("click",()=>{
+    
+    var appending = [];
+    console.log(Star[0].value);
+    for (let i = 0; i < Star.length; i++) {
+        appending.push({
+            [`${selectedJson["selected"][i]}`]: Star[i].value
+        });
+    }
+    dataReceived["selected"] = appending;
+    console.log(dataReceived);
+
+
+    var finalJson = dataReceived;
+});

@@ -13,6 +13,7 @@
   />
     <script defer src="/js/restAreaStar.js"></script>
     <script defer src="/js/myLocation.js"></script>
+    <script defer src="/js/restAreaReview1.js"></script>
     <script defer src="/js/components/back.js"></script>
     <script defer src="/js/components/dropdown.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw1ZBbZLRARjidn3WHiKdlJThB3a-uGdE"></script>
@@ -48,30 +49,27 @@
                 <div id="RatingBigBox">
                     <div id="EntireRow">
                         <div id="plusInfoWrapper">
-                            <img
-                              src="/assets/img/fork-and-knife.png"
-                              style="width: 18px; height: 18px; margin-right: 4px"
-                            />
+                            <i class="fas fa-utensils" style="margin-right:8px; color:#6ccae1;"></i>
                             <p id="plusInfo">음식이 다양해요</p>
                         </div>
                         <div class="rightStar">
                             <span class="star">
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                <span class="realStar">
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                </span>
+                                <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                            <span class="realStar">
+                                <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                            </span>
                                 <input
                                   type="range"
                                   oninput="drawStar(this)"
-                                  value="1"
+                                  value="0"
                                   step="1"
                                   min="0"
                                   max="10"
@@ -82,30 +80,27 @@
                     <div>
                         <div id="EntireRow">
                             <div id="plusInfoWrapper">
-                                <img
-                                  src="/assets/img/fork-and-knife.png"
-                                  style="width: 18px; height: 18px; margin-right: 4px"
-                                />
+                                <i class="fas fa-utensils" style="margin-right:8px; color:#6ccae1;"></i>
                                 <p id="plusInfo">시설이 편리해요</p>
                             </div>
                             <div class="rightStar">
                                 <span class="star">
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <span class="realStar">
-                                        <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                        <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                        <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                        <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                        <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    </span>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                <span class="realStar">
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                </span>
                                     <input
                                       type="range"
                                       oninput="drawStar(this)"
-                                      value="1"
+                                      value="0"
                                       step="1"
                                       min="0"
                                       max="10"
@@ -119,30 +114,27 @@
                     <div>
                         <div id="EntireRow">
                             <div id="plusInfoWrapper">
-                                <img
-                                  src="/assets/img/fork-and-knife.png"
-                                  style="width: 18px; height: 18px; margin-right: 4px"
-                                />
+                                <i class="fas fa-utensils" style="margin-right:8px; color:#6ccae1;"></i>
                                 <p id="plusInfo">화장실이 깨끗해요</p>
                             </div>
                             <div class="rightStar">
                                 <span class="star">
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <span class="realStar">
-                                        <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                        <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                        <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                        <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                        <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    </span>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                <span class="realStar">
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                </span>
                                     <input
                                       type="range"
                                       oninput="drawStar(this)"
-                                      value="1"
+                                      value="0"
                                       step="1"
                                       min="0"
                                       max="10"
@@ -155,30 +147,27 @@
                     <div>
                         <div id="EntireRow">
                             <div id="plusInfoWrapper">
-                                <img
-                                  src="/assets/img/fork-and-knife.png"
-                                  style="width: 18px; height: 18px; margin-right: 4px"
-                                />
+                                <i class="fas fa-utensils" style="margin-right:8px; color:#6ccae1;"></i>
                                 <p id="plusInfo">분위기가 특별해요</p>
                             </div>
                             <div class="rightStar">
                                 <span class="star">
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    <span class="realStar">
-                                        <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                        <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                        <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                        <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                        <i class="fas fa-star" style="font-size: 0.68em;"></i>
-                                    </span>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                <span class="realStar">
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                    <i class="fas fa-star" style="font-size: 0.68em; margin-left:2px;margin-right:2px;"></i>
+                                </span>
                                     <input
                                       type="range"
                                       oninput="drawStar(this)"
-                                      value="1"
+                                      value="0"
                                       step="1"
                                       min="0"
                                       max="10"

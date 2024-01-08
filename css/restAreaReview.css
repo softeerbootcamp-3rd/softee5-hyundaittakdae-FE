@@ -63,7 +63,8 @@ body{
 }
 
 #rightSide{
-    width: 70%;
+    
+    width: 60%;
     height: 55px;
     display:flex;
     justify-content: space-evenly;
@@ -80,7 +81,7 @@ body{
   }
 
 #graySemiMargin{
-    font-family: "Semibold";
+    font-family: "Regular";
     font-size: 16px;
     color: var(--400);
     margin-top:10px;
@@ -120,7 +121,7 @@ body{
 }
 
 #plusInfoWrapper {
-    width: 80%;
+    width: 100%;
     display: flex;
     margin: 16px 0px;
   }
@@ -140,7 +141,8 @@ body{
   }
 
   .rightStar{
-    
+    margin-left: 0;
+    width: 90%;
     display:flex;
     justify-content: center;
     align-items: center;

@@ -137,6 +137,8 @@
     margin: 4px;
     width: 10%;
     height: 44px;
+    padding-left: 4px;
+    padding-right: 4px;
     font-family: "Semibold";
     font-size: 14px;
     display: flex;
