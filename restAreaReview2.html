@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/css/restAreaReview2.css" />
+    <link rel="stylesheet" href="/css/dropdown.css" />
+    <link rel="stylesheet" href="/css/star.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+  />
+    <script defer src="/js/myLocation.js"></script>
+    <script defer src="/js/components/back.js"></script>
+    <script defer src="/js/restAreaStar.js"></script>
+    <script defer src="/js/restAreaReview2.js"></script>
+    <script defer src="/js/components/dropdown.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw1ZBbZLRARjidn3WHiKdlJThB3a-uGdE"></script>
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>휴게소를 부탁해</title>
+  </head>
+  <body>
+    <div id="mobileWrapper">
+      <div id="app">
+        <div id="bigTitleRest">
+          <img
+            id="back"
+            src="/assets/img/backArrow.png"
+            style="width: 24px; height: 24px"
+          />
+          휴게소 후기 등록
+        </div>
+        <div id="almostEntire">
+            
+            <div id="Modal">
+                <div id="HowistheRest">
+                    <div id="titleFont" style="margin-top:30px;">어디서 식사를 하셨나요?</div>
+                </div>
+                     
+            </div>
+            
+            
+            
+            <div id="Modal-middle">
+                <div id="HowistheRest">
+                    <div id="titleFont">음식은 어떠셨나요?</div>
+                    <div id="titleFont" style="color:gray;">별점을 매겨주세요</div>
+                </div>
+                <div class="middleStar">
+                    <span class="star">
+                        <i class="fas fa-star" style="font-size: 1em;"></i>
+                        <i class="fas fa-star" style="font-size: 1em;"></i>
+                        <i class="fas fa-star" style="font-size: 1em;"></i>
+                        <i class="fas fa-star" style="font-size: 1em;"></i>
+                        <i class="fas fa-star" style="font-size: 1em;"></i>
+                        <span class="realStar">
+                            <i class="fas fa-star" style="font-size: 1em;"></i>
+                            <i class="fas fa-star" style="font-size: 1em;"></i>
+                            <i class="fas fa-star" style="font-size: 1em;"></i>
+                            <i class="fas fa-star" style="font-size: 1em;"></i>
+                            <i class="fas fa-star" style="font-size: 1em;"></i>
+                        </span>
+                        <input
+                          type="range"
+                          oninput="drawStar(this)"
+                          value="1"
+                          step="1"
+                          min="0"
+                          max="10"
+                        />
+                    </span>
+                </div>
+
+
+            </div>
+
+            <button id="writeContinueBtn">
+                후기 등록
+            </button>
+
+        
+        
+      </div>
+    </div>
+  </body>
+</html>
