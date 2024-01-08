@@ -131,6 +131,7 @@ input {
 #sidePadding {
   width: calc(100%-32px);
   padding: 0 16px;
+  padding-bottom: 24px;
 }
 
 #sideBetween {
@@ -269,6 +270,10 @@ select {
 }
 
 #basicImg {
+  width: 16px;
+  height: 16px;
+}
+.basicImg {
   width: 16px;
   height: 16px;
 }
