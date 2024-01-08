@@ -78,7 +78,7 @@ RestAreaArr.forEach((data, idx) => {
       <img id="tinyImg" src="/assets/img/mainStar.png" />
       <div id="themeScoreValue">${data.themeScore}</div>
     </div>
-    <div id="restAreaName">
+    <div id="restAreaName" >
       ${data.restAreaName}
     </div>
     <div id="roadName">${data.roadName}</div>

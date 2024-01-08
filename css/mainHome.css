@@ -125,7 +125,7 @@
 }
 
 #themeValue {
-  color: var(--mainColor);
+  color: var(--secondColor);
   font-family: "Thick";
   font-size: 15px;
   margin-left: 2px;
@@ -134,13 +134,14 @@
   width: 0px;
   height: 6px;
   border: 1px solid var(--mainColor);
+  opacity: 70%;
   margin-left: 6px;
   margin-right: 6px;
 }
 #tinyGrayLine {
   width: 0px;
   height: 6px;
-  border: 1px solid var(--400);
+  border: 1px solid var(--300);
   margin-left: 6px;
   margin-right: 6px;
 }
@@ -157,7 +158,7 @@
   color: var(--700);
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-family: "Semibold";
+  font-family: "Bold";
   font-size: 14px;
   margin-top: 9px;
 }
@@ -166,6 +167,8 @@
   color: var(--500, #646774);
   font-size: 12px;
   margin-top: 4px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 #totalScoreWrapper {

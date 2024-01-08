@@ -42,6 +42,7 @@
 
 :root {
   --mainColor: #6ccae1;
+  --secondColor: #8082e5;
   --white: #ffffff;
   --100: #eff0f5;
   --150: #f7f8fa;
@@ -115,7 +116,7 @@ input {
 }
 
 #app {
-  background-color: #ffffff;
+  background-color: var(--150);
   color: black;
   overflow-x: hidden;
   overflow-y: hidden;
