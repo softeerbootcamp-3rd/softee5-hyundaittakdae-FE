@@ -261,6 +261,16 @@
   margin-top: 3 px;
 }
 
+#goodThemeCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: rgba(108, 202, 225, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #badThemeCircle {
   width: 40px;
   height: 40px;
