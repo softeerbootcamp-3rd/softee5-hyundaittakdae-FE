@@ -133,15 +133,14 @@
 #mainColorLine {
   width: 0px;
   height: 6px;
-  border: 1px solid var(--mainColor);
-  opacity: 70%;
+  border-left: 1px solid var(--mainColor);
   margin-left: 6px;
   margin-right: 6px;
 }
 #tinyGrayLine {
   width: 0px;
-  height: 6px;
-  border: 1px solid var(--300);
+  height: 7px;
+  border-left: 1px solid var(--300);
   margin-left: 6px;
   margin-right: 6px;
 }
