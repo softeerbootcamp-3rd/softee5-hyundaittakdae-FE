@@ -13,3 +13,6 @@ const Toast = (message) => {
     onClick: function () {}, // Callback after click
   }).showToast();
 };
+
+
+export default Toast;
