@@ -15,30 +15,36 @@
   <body>
     <div id="mobileWrapper">
       <div id="app">
-        <div id="bannerCover">
-          <img id="backWhite" src="/assets/img/whiteBack.png" />
-
-          <div id="bannerInfoWrapper">
-            <div id="storeDis">
-              <img
-                src="/assets/img/whiteGPS.png"
-                style="width: 16px; padding-right: 3px"
-              />1.4km
-            </div>
-            <div id="storeName">의왕청계간이 휴게소(판교방향)</div>
-            <div id="roadName">경부 고속도로 상행선</div>
-          </div>
+        <div id="bannerImg">
         </div>
-
-        <div id="sideMargin">
+        <img id="back" src="/assets/img/backArrowWhite.png" style="left: 16px; top: 8px;width: 24px; height: 24px; z-index: 50;"></img>
+        <div id="bannerImgWrapper"></div>
+        <div id="glassBox">
+          <div id="storeDisWrapper">
+            <img
+              src="/assets/img/whiteGPS.png"
+              style="width: 12px; height: 12px; padding-right: 3px; margin-top: 1px;"
+            /><div id="storeDis">1.4km</div>
+          </div>
+          <div id="storeName">의왕청계간이 휴게소(판교방향)</div>
+          <div id="roadName">경부 고속도로 상행선</div>
+          <div
+            id="grayLine"
+            style="
+              border-color: rgba(235, 235, 235, 0.5);
+              margin-bottom: 12.53px;
+            "
+          ></div>
           <div id="plusInfoWrapper">
             <img
               src="/assets/img/store.png"
               style="width: 18px; height: 18px; margin-right: 4px"
             />
-            <p id="plusInfo">수유실, 마트, 쉼터, 주유소, 주차 전체 101면</p>
+            <p id="plusInfo" style="padding-top: 1px">
+              수유실 | 마트 | 쉼터 | 주유소 | 주차 전체 101면
+            </p>
           </div>
-          <div id="sideBetween">
+          <div id="sideBetween" style="margin-top: 16px">
             <a href="/restAreaReview.html" id="writeReviewBtn">
               <img
                 src="/assets/img/pencil.png"
@@ -53,69 +59,71 @@
             </button>
           </div>
         </div>
+        <div id="shadowingSection"></div>
 
-        <div id="grayLine" style="margin-top: 22px"></div>
-        <div id="sidePadding" style="background-color: var(--150)">
+        <div
+          id="sidePadding"
+          style="background-color: var(--150); padding-top: 64px"
+        >
           <div id="reviewCount">
             이용자 후기
-            <p id="reviewCountValue">299개</p>
-          </div>
-          <div id="totalScoreBox">
-            <div id="scoreBox">
-              <div id="graySemi">전체 평점</div>
-              <div style="color: var(--mainColor); margin: 0 10px">|</div>
-              <div id="totalScore">5.0</div>
-            </div>
-            <div id="starBox" style="margin-right: 15px">
-              <img id="smallStar" src="/assets/img/mainStar.png" />
-              <img id="smallStar" src="/assets/img/mainStar.png" />
-              <img id="smallStar" src="/assets/img/mainStar.png" />
-              <img id="smallStar" src="/assets/img/mainStar.png" />
-              <img id="smallStar" src="/assets/img/mainStar.png" />
-            </div>
           </div>
           <div id="themeBoxWrapper">
             <div id="themeBox">
-              <div id="graySemi">이런 점이 좋아요</div>
-              <div style="display: flex">
-                <img
-                  id="bigStar"
-                  src="/assets/img/mainStar.png"
-                  style="margin-right: 4px; margin-top: -3px"
-                />
-                <div class="themeScore">4.3</div>
+              <div id="themeEachBox">
+                <p id="body1semibold" style="color: #989AA9">이런 점이 좋아요!</p>
+                <div id="themeGoodBox">
+                  <img src="/assets/img/goodTheme.png" style="width: 40px; height: 40px; margin-top: 14px;"></img>
+                  <p id="goodValue" style="color: var(--600); font-family: 'Semibold'; font-size: 14px; margin-top: 8px;">음식이 맛있어요</p>
+                  <div id="themeScoreBox" style="margin-top: 8px;">
+                    <img src="/assets/img/mainStar.png" style="width: 13.6px; height: 13.6px;margin-right: 4px; margin-bottom: 1px;"/>
+                    <div id="smallThemeScore" style="margin-bottom: 1px;">4.3</div>
+                  </div>
+                </div>
               </div>
-              <div id="goodTag">"음식이 다양해요"</div>
-            </div>
-            <div id="themeBox">
-              <div id="graySemi">이런 점이 아쉬워요</div>
-              <div style="display: flex">
-                <img
-                  id="bigStar"
-                  src="/assets/img/mainStar.png"
-                  style="margin-right: 4px; margin-top: -3px"
-                />
-                <div class="themeScore">1.2</div>
+              <div id="themeEachBox">
+                <p id="body1semibold" style="color: #989AA9">이런 점이 아쉬워요..</p>
+                <div id="themeBadBox">
+                  <div id="badThemeCircle" style="margin-top: 14px;">
+                    <img src="/assets/img/badTheme.png" style="width: 23.5px; height: 23.5px;"></img>
+                  </div>
+                  
+                  <p id="goodValue" style="color: var(--600); font-family: 'Semibold'; font-size: 14px; margin-top: 8px;">시설이 불편해요</p>
+                  <div id="themeScoreBox" style="margin-top: 8px;">
+                    <img src="/assets/img/mainStar.png" style="width: 13.6px; height: 13.6px;margin-right: 4px; margin-bottom: 1px;"/>
+                    <div id="smallThemeScore" style="margin-bottom: 1px;">1.2</div>
+                  </div>
+                </div>
               </div>
-              <div id="badTag">"화장실이 더러워요"</div>
+
             </div>
           </div>
+          <div id="totalScoreBox">
+            <div id="scoreBox">
+              <div id="graySemi">휴게소 전체 평점</div>
+              <div style="color: var(--300); margin: 0 8px">|</div>
+              <img src="/assets/img/mainStar.png" style="width: 16.8px; height: 16.8px;margin-right: 4px; margin-bottom: 1px;"/>
+              <div id="totalScore">4.3</div>
+              <div id="reviewCountValue">(299)</div>
+            </div>
+            <img style="width: 20px; height: 20px; margin-right: 8px;" src="/assets/img/frontArrow.png"></img>
+          </div>
+          
         </div>
         <div
           style="background-color: var(--100); width: 100%; height: 8px"
         ></div>
         <div id="sideMargin" style="margin-top: 24px; padding-bottom: 4px">
-          <div id="sideBetween">
+          <div id="sideBetween" style="align-items: center;">
             <div id="titleFont">휴게소 식당 메뉴</div>
             <div
               style="
                 font-family: Semibold;
-                font-size: 10px;
+                font-size: 13px;
                 color: var(--400);
-                padding-top: 4px;
               "
             >
-              * 별점이 높은 메뉴부터 표시됩니다
+              * 별점 높은 순 기준
             </div>
           </div>
         </div>
@@ -124,30 +132,9 @@
           style="margin-top: 14px; padding-left: 6px"
         ></div>
         <div id="grayLine"></div>
-        <div id="sideMargin" style="margin-top: 20px">
+        <div id="sideMargin">
           <div id="menuBox" style="margin-bottom: 24px">
-            <img id="mediumImg" src="/assets/img/exFoodImg.png" />
-            <div id="menuInfoWrapper">
-              <div id="menuName">
-                매운 마제소바+돈카츠+냉면 소바+공기밥세+매운
-                마제소바+돈카츠+냉면 소바+공기밥세+매운 마제소바+돈카츠+냉면
-                소바+공기밥세
-              </div>
-              <div id="sideBetween" style="margin-top: 8px">
-                <div style="display: flex">
-                  <img
-                    id="basicImg"
-                    src="/assets/img/mainStar.png"
-                    style="margin-right: 4px; margin-top: 2px"
-                  />
-                  <div id="menuScore">4.8</div>
-                </div>
-                <div id="menuPrice" style="display: flex">
-                  8,0000
-                  <div>원</div>
-                </div>
-              </div>
-            </div>
+           
           </div>
           <div id="menuListUpWrapper"></div>
         </div>
