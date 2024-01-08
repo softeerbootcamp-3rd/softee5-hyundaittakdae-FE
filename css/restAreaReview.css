@@ -8,6 +8,19 @@
     background-color: #f7f8fa;
 }
 
+#bigTitleRest{
+    
+    font-family: "Semibold";
+    font-size: 14px;
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 12px;
+    position: relative;
+    background-color: #f7f8fa;
+
+
+}
+
 #BottomBox{
     position: fixed;
     bottom: 0%;
@@ -101,7 +114,7 @@
 }
 
 #plusInfoWrapper {
-    width: 100%;
+    width: 80%;
     display: flex;
     margin: 16px 0px;
   }
@@ -121,7 +134,7 @@
   }
 
   .rightStar{
-    margin-left: 30px;
+    
     display:flex;
     justify-content: center;
     align-items: center;

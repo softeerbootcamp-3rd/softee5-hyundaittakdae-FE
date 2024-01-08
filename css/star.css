@@ -1,5 +1,8 @@
 .star {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 32px;
   color: #ddd;
 }
@@ -22,3 +25,11 @@
   pointer-events: none;
 }
 
+.realStar{
+
+  position: relative;
+  bottom: 0%;
+  display: flex;
+  
+
+}
