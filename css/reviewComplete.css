@@ -1,0 +1,84 @@
+#backGroundImg {
+  width: 576px;
+  height: 426px;
+  background-size: cover;
+  position: absolute;
+  top: 73px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#recommendBox {
+  width: 266px;
+  height: 213px;
+  padding: 0px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(108, 202, 225, 0.6);
+  background: var(--white);
+  box-shadow: 0px 1px 15px 0px rgba(45, 44, 86, 0.05);
+  margin-top: 300px;
+}
+
+#recommendSmallTitle {
+  color: var(--700);
+  font-family: "Semibold";
+  font-size: 15px;
+  margin-top: 34px;
+  height: fit-content;
+  width: 100%;
+  text-align: center;
+}
+
+#recommendThemeValue {
+  color: #8081e4;
+  font-family: "Bold";
+  font-size: 17px;
+  height: fit-content;
+}
+
+#recommendTag {
+  color: var(--700);
+  font-family: "Bold";
+  font-size: 17px;
+}
+
+#restAreaBox {
+  width: 245px;
+  height: 56px;
+  border-radius: 8px;
+  border: 1px solid var(--200);
+  background: var(--50, #fafafa);
+  backdrop-filter: blur(10px);
+  padding: 10px 9px;
+  display: flex;
+}
+
+#restAreaImg {
+  width: 56px;
+  height: 56px;
+  border-radius: 4px;
+  background: url("/assets/img/restPlace.png"), lightgray 50%;
+  background-size: cover;
+}
+
+#restAreaNameValue {
+  overflow: hidden;
+  color: var(--600);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Semibold";
+  font-size: 14px;
+  margin-top: 9px;
+}
+
+#restAreaRoadValue {
+  color: var(--400);
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+#restAreaTextSection {
+  width: 181px;
+  margin-left: 10px;
+  height: auto;
+}

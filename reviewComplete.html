@@ -4,13 +4,55 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/css/reviewComplete.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>휴게소를 부탁해</title>
   </head>
   <body>
     <div id="mobileWrapper">
-      <div id="app">
-        <img src="/assets/img/" />
+      <div
+        id="app"
+        style="
+          position: relative;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+        "
+      >
+        <div style="display: flex; justify-content: center; margin-top: 73px">
+          <img id="backGroundImg" src="/assets/img/reviewComplete.png" />
+        </div>
+        <div id="recommendBox">
+          <p id="recommendSmallTitle">이번 휴게소가 아쉬웠다면?</p>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              margin-top: 6px;
+              margin-bottom: 18px;
+              height: fit-content;
+            "
+          >
+            <span id="recommendThemeValue">음식이 맛있는 휴게소</span
+            ><span id="recommendTag">를 추천드려요!</span>
+          </div>
+          <div id="restAreaBox">
+            <div id="restAreaImg"></div>
+            <div id="restAreaTextSection">
+              <p id="restAreaNameValue">
+                의왕청계간이
+                휴게소(판교방향)ㅁㄴㅇㅁㅇㄴㅁㅇㄴㅁㅇㅁㅇㅁㄴㅇㅁㄴㅇㅁ
+              </p>
+              <p id="restAreaRoadValue">경부 고속도로 상행선</p>
+            </div>
+          </div>
+        </div>
+        <div id="sideMargin" style="width: 100%; margin-bottom: 50px">
+          <button id="lineBtn" style="margin-top: 102px; margin-bottom: 8px">
+            이 휴게소 다른 리뷰 보기
+          </button>
+          <button id="fillBtn">홈으로</button>
+        </div>
       </div>
     </div>
   </body>
