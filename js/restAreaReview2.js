@@ -1,4 +1,4 @@
-var RestaurantList = ["풀초롱 밥상", "풀초롱 밥상머리 밥상", "쳐비스"];
+var RestaurantList = ["풀초롱 밥상", "풀초롱 밥상머리 밥상", "쳐비스","asdasd","DSfsdf"];
 
 
 const container = document.querySelector("#RestaurantList");
