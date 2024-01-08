@@ -13,10 +13,12 @@
 }
 
 .star span {
+  font-size: 32px;
   width: 0;
   position: absolute;
   left: 0;
-  color: red;
+  color: #6ccae1;
   overflow: hidden;
   pointer-events: none;
 }
+
