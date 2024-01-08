@@ -8,7 +8,7 @@ choice.addEventListener("click", function () {
     var newImgUrl = beforeImgTag[0].src;
     var newUrl =
       plusFileUrl +
-      "gray" +
+      "whiteGray" +
       newImgUrl.substring(newImgUrl.lastIndexOf("/") + 1);
     beforeImgTag[0].src = newUrl;
   }
@@ -20,7 +20,7 @@ choice.addEventListener("click", function () {
     var beforeImgTag = choice.getElementsByTagName("img");
     var newImgUrl = beforeImgTag[0].src;
     var newUrl =
-      plusFileUrl + newImgUrl.substring(newImgUrl.lastIndexOf("/") + 5);
+      plusFileUrl + newImgUrl.substring(newImgUrl.lastIndexOf("/") + 10);
     beforeImgTag[0].src = newUrl;
   }
 });
@@ -32,7 +32,7 @@ unChoiceThemes.forEach((unChoiceTheme) => {
       var newImgUrl = beforeImgTag[0].src;
       var newUrl =
         plusFileUrl +
-        "gray" +
+        "whiteGray" +
         newImgUrl.substring(newImgUrl.lastIndexOf("/") + 1);
       beforeImgTag[0].src = newUrl;
     }
@@ -44,7 +44,7 @@ unChoiceThemes.forEach((unChoiceTheme) => {
       var beforeImgTag = choice.getElementsByTagName("img");
       var newImgUrl = beforeImgTag[0].src;
       var newUrl =
-        plusFileUrl + newImgUrl.substring(newImgUrl.lastIndexOf("/") + 5);
+        plusFileUrl + newImgUrl.substring(newImgUrl.lastIndexOf("/") + 10);
       beforeImgTag[0].src = newUrl;
     }
   });

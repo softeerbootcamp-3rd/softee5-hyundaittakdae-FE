@@ -47,10 +47,10 @@ var RestAreaArr = [
 ];
 
 var logoUrlArr = {
-  "음식이 맛있어요": "/assets/img/themeImg/mainColorFood.png",
-  "시설이 편리해요": "/assets/img/themeImg/mainColorPlace.png",
-  "화장실이 깨끗해요": "/assets/img/themeImg/mainColorBathroom.png",
-  "분위기가 좋아요": "/assets/img/themeImg/mainColorMood.png",
+  "음식이 맛있어요": "/assets/img/themeImg/purplefood.png",
+  "시설이 편리해요": "/assets/img/themeImg/purpleplace.png",
+  "화장실이 깨끗해요": "/assets/img/themeImg/purplemathroom.png",
+  "분위기가 좋아요": "/assets/img/themeImg/purplemood.png",
 };
 
 var restAreaList = document.getElementById("restAreaList");
