@@ -3,6 +3,12 @@
 /*기본은 Regular로 설정 */
 /* 스타일 시스템은 root CSS와 이 파일 참고*/
 @font-face {
+  font-family: "Thick";
+  src: url(/assets/fonts/Pretendard-Bold.woff) format("woff");
+  font-weight: 800;
+}
+
+@font-face {
   font-family: "Bold";
   src: url(/assets/fonts/Pretendard-SemiBold.woff) format("woff");
   font-weight: 700;
@@ -71,6 +77,11 @@
   color: var(--600);
   font-family: "Semibold";
   font-size: 14px;
+}
+
+#body2regular {
+  color: var(--400);
+  font-size: 12px;
 }
 
 a {
@@ -265,4 +276,9 @@ select {
 #smallImg {
   width: 14px;
   height: 14px;
+}
+
+#tinyImg {
+  width: 12px;
+  height: 12px;
 }
