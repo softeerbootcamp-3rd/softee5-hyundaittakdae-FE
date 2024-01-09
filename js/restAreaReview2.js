@@ -1,3 +1,29 @@
+//import Toast from "/js/toast.js";
+// 새로운 script 요소를 생성합니다.
+const scriptElement = document.createElement("script");
+// src 속성을 설정합니다.
+scriptElement.src = "https://cdn.jsdelivr.net/npm/toastify-js";
+
+// script 요소를 head에 추가하여 스크립트를 로드합니다.
+document.head.appendChild(scriptElement);
+
+const Toast = (message) => {
+  Toastify({
+    text: `${message}`,
+    duration: 2500,
+    destination: "https://github.com/apvarun/toastify-js",
+    newWindow: true,
+    close: false,
+    gravity: "bottom", // `top` or `bottom`
+    position: "center", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {},
+    backgroundColor: "rgba(82, 180, 204, 1)",
+    onClick: function () {}, // Callback after click
+  }).showToast();
+};
+
+
 const dataReceived = JSON.parse(localStorage.getItem("myData"));
 
 const submit = document.querySelector("#writeContinueBtn");
@@ -37,6 +63,8 @@ var H = 285;
 var gray = "rgb(239, 240, 246)";
 var skyblue = "#6ccae1";
 var lightblue = "#f1fafc";
+var lightgray = "rgb(250, 250, 250)";
+var grayText = "rgb(180 185 200)";
 
 Modal.style.height = H;
 RestaurantList.forEach((item, index) => {
@@ -45,11 +73,13 @@ RestaurantList.forEach((item, index) => {
   const width = item.length * 13.5;
   singleBtn.style.width = `${width}px`;
   singleBtn.innerText = item;
+  singleBtn.style.marginBottom = `0px`;
 
-  singleBtn.style.marginBottom = "10px";
 
   singleBtn.addEventListener("click", (event) => {
     var backgroundColor = window.getComputedStyle(event.target).backgroundColor;
+
+    var done = false;
     if (SELECTED.includes(event.target.innerText)) {
       for (let i = 0; i < SELECTED.length; i++) {
         if (SELECTED[i] === event.target.innerText) {
@@ -57,16 +87,27 @@ RestaurantList.forEach((item, index) => {
         }
       }
     } else {
-      SELECTED.push(event.target.innerText);
+        if(SELECTED.length >= 1){
+            event.target.style.background = lightgray;
+            event.target.style.color = grayText;
+            event.target.style.border = `0.79px solid #999ba5`;
+            Toast('한개만 선택 가능합니다.');
+            done = true;
+        }
+       else SELECTED.push(event.target.innerText);
+
     }
-    if (backgroundColor === gray) {
-      event.target.style.background = lightblue;
-      event.target.style.color = skyblue;
-      event.target.style.border = `0.79px solid ${skyblue}`;
-    } else {
-      event.target.style.background = gray;
-      event.target.style.color = "#999ba5";
-      event.target.style.border = `0.79px solid #999ba5`;
+    if(done === false){
+        if (backgroundColor === lightgray) {
+        event.target.style.background = lightblue;
+        event.target.style.color = skyblue;
+        event.target.style.border = `0.79px solid ${skyblue}`;
+        } else {
+        event.target.style.background = lightgray;
+        event.target.style.color = grayText;
+        event.target.style.border = `0.79px solid #999ba5`;
+        }
+        done = true;
     }
     selectedJson = {
       selected: SELECTED,
@@ -91,6 +132,13 @@ inputField.classList.add("inputBar");
 Modal.appendChild(inputField);
 
 submit.addEventListener("click", () => {
+
+  if(SELECTED.length !== 1){
+     
+    Toast('식사하신 한군데를 선택해 주세요');
+        
+  }
+
   var appending = [];
   console.log(Star[0].value);
   for (let i = 0; i < Star.length; i++) {
