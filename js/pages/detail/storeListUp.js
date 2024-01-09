@@ -61,14 +61,14 @@ async function getRestaurantList() {
   const response = await axios
     .get("http://15.164.44.233:8080/rest-areas/1/restaurants", {})
     .then((data) => {
-      console.log(data);
       storeNameList = data.data.result;
+      console.log(storeNameList);
 
       var storeSideBar = document.getElementById("storeSideBar");
       storeNameList.forEach((store, index) => {
         let storeTag = document.createElement("div");
         storeTag.id = "unChoiceStore";
-        let storeId = store.id;
+        let storeId = store.restaurantId;
         storeTag.textContent = store.restaurantName;
         storeTag.addEventListener("click", function () {
           let choiceStore = document.getElementById("choiceStore");
@@ -78,18 +78,28 @@ async function getRestaurantList() {
           console.log("클릭한 가게id:", storeId);
           //여기서부터 클릭하면 각 가게에 대한 음식으로 변경;
 
-          var menuListUpWrapper = document.getElementById("menuListUpWrapper");
-          menuListUpWrapper.innerHTML = "";
-          //menuList로 배열 받기
-          menuList.forEach((menu) => {
-            var menuBox = document.createElement("div");
-            menuBox.id = "menuBox";
-            menuBox.style.marginBottom = "20px";
-            menuBox.innerHTML = `
-            <img id="mediumImg" src="${menu.menuImg}" />
+          async function getRestaurantMenuList() {
+            const response = await axios
+              .get(
+                `http://15.164.44.233:8080/rest-areas/restaurants/${storeId}/menus`,
+                {}
+              )
+              .then((data) => {
+                console.log(data.data.result.menuDTOList);
+
+                var menuListUpWrapper =
+                  document.getElementById("menuListUpWrapper");
+                menuListUpWrapper.innerHTML = "";
+                //menuList로 배열 받기
+                data.data.result.menuDTOList.forEach((menu) => {
+                  var menuBox = document.createElement("div");
+                  menuBox.id = "menuBox";
+                  menuBox.style.marginBottom = "20px";
+                  menuBox.innerHTML = `
+            <img id="mediumImg" src="${menu.imageUrl}" />
                       <div id="menuInfoWrapper">
                         <div id="menuName">
-                          ${menu.menuName}
+                          ${menu.name}
                         </div>
                         <div id="sideBetween" style="margin-top: 8px">
                           <div style="display: flex">
@@ -98,18 +108,24 @@ async function getRestaurantList() {
                               src="/assets/img/mainStar.png"
                               style="margin-right: 4px; margin-bottom: 2px"
                             />
-                            <div id="menuScore">4.8</div>
+                            <div id="menuScore">${menu.rating}</div>
                           </div>
                           <div id="menuPrice" style="display: flex">
-                            ${menu.menuPrice}
+                            ${menu.price}
                             <div>원</div>
                           </div>
                         </div>
                       </div>
           `;
 
-            menuListUpWrapper.appendChild(menuBox);
-          });
+                  menuListUpWrapper.appendChild(menuBox);
+                });
+              });
+
+            return response;
+          }
+
+          getRestaurantMenuList();
         });
         storeSideBar.appendChild(storeTag);
       });
