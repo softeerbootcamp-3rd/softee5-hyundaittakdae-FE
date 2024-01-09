@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// detail 페이지 상단
+// detail 페이지 상단 상세정보 불러오기
 var glassBox = document.getElementById("glassBox");
 var restPlaceImg = document.getElementById("bannerImg");
 
@@ -11,8 +11,12 @@ async function getRestInfo() {
     .get(`http://15.164.44.233:8080/rest-areas/${choicePlaceId}/details`, {})
     .then((data) => {
       let restInfo = data.data.result;
+      console.log(restInfo);
       // FIXME : 여기 Url로 수정
-      restPlaceImg.style.background = `url(${restInfo.imgUrl}) lightgray -53.113px 0px / 129.507% 100% no-repeat`;
+      console.log(
+        `url("${restInfo.imageUrl}") lightgray -53.113px 0px / 129.507% 100% no-repeat`
+      );
+      restPlaceImg.style.background = `url("${restInfo.imgUrl}") lightgray -53.113px 0px / 129.507% 100% no-repeat`;
 
       glassBox.innerHTML = `
         
@@ -60,4 +64,4 @@ async function getRestInfo() {
   return response;
 }
 
-console.log(getRestInfo());
+getRestInfo();

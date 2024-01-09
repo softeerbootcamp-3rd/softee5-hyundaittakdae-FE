@@ -6,14 +6,14 @@ var foodList = [];
 async function getRestaurantList() {
   foodList = [];
   const response = await axios
-    .get("http://15.164.44.233:8080/rest-areas/7/restaurants", {})
+    .get("http://15.164.44.233:8080/rest-areas/1/restaurants", {})
     .then((data) => {
       storeNameList = data.data.result;
 
       var storeSideBar = document.getElementById("storeSideBar");
       storeNameList.forEach((store, index) => {
         let storeTag = document.createElement("div");
-        storeTag.id = index === 0 ? "choiceStore" : "unChoiceStore";
+        storeTag.id = "unChoiceStore";
 
         storeTag.textContent = store.restaurantName;
         storeTag.addEventListener("click", function () {

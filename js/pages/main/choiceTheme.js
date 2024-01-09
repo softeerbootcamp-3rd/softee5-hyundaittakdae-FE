@@ -135,7 +135,8 @@ var callThemeRestArea = (theme) => {
     </div>
   </div>`;
     restAreaBox.addEventListener("click", () => {
-      localStorage.setItem("restAreaId", 7);
+      //FIXME : 받아온 ID넣기
+      localStorage.setItem("restAreaId", 1);
       window.location.href = "/detail.html";
     });
     restAreaList.appendChild(restAreaBox);
