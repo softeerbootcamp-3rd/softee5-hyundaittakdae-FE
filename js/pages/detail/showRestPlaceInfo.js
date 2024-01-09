@@ -13,10 +13,7 @@ async function getRestInfo() {
       let restInfo = data.data.result;
       console.log(restInfo);
       // FIXME : 여기 Url로 수정
-      console.log(
-        `url("${restInfo.imageUrl}") lightgray -53.113px 0px / 129.507% 100% no-repeat`
-      );
-      restPlaceImg.style.background = `url("${restInfo.imgUrl}") lightgray -53.113px 0px / 129.507% 100% no-repeat`;
+      restPlaceImg.style.background = `url(${restInfo.imageUrl}) lightgray -53.113px 0px / 129.507% 100% no-repeat`;
 
       glassBox.innerHTML = `
         
@@ -45,7 +42,7 @@ async function getRestInfo() {
           </p>
         </div>
         <div id="sideBetween" style="margin-top: 16px">
-          <a href="/restAreaReview.html" id="writeReviewBtn">
+          <a href="/restAreaReview" id="writeReviewBtn">
             <img
               src="/assets/img/pencil.png"
               style="width: 16px; height: 16px; margin-right: 4px"
