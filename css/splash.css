@@ -5,33 +5,27 @@
   transform: translate(-50%, -50%);
 }
 
-#splashBalloon {
-  width: 68px;
-  height: 71px;
-  position: fixed;
-  top: 36.5%;
-  right: 24%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  animation: popIn 1s ease-out forwards, moveUp 1s ease-out forwards;
-}
-
-@keyframes popIn {
-  from {
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0;
+@keyframes balloonAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0.5;
   }
-  to {
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+  100% {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
 }
 
-@keyframes moveUp {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-20%);
-  }
+#splashBalloon {
+  width: 68px;
+  height: 71px;
+  position: fixed;
+  top: 38.7%;
+  right: 5%;
+  transform: translate(-50%, -50%);
+  animation: balloonAnimation 0.6s;
 }
