@@ -104,7 +104,3 @@ RestAreaArr.forEach((data, idx) => {
   });
   restAreaList.appendChild(restAreaBox);
 });
-
-var RestAreaComponent = `<div id="restAreaBox">
-
-</div>`;

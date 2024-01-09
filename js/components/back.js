@@ -11,3 +11,8 @@ var backWhiteElement = document.getElementById("backWhite");
 if (backWhiteElement) {
   backWhiteElement.addEventListener("click", handleBackClick);
 }
+
+var backElement = document.getElementById("back");
+if (backElement) {
+  backElement.addEventListener("click", handleBackClick);
+}
