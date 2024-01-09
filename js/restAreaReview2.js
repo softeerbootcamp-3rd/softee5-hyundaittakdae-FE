@@ -7,6 +7,7 @@ scriptElement.src = "https://cdn.jsdelivr.net/npm/toastify-js";
 // script 요소를 head에 추가하여 스크립트를 로드합니다.
 document.head.appendChild(scriptElement);
 
+
 const Toast = (message) => {
   Toastify({
     text: `${message}`,
@@ -35,6 +36,21 @@ if (dataReceived) {
   console.log("not received");
   // Handle the case where data is not available
 }
+
+var restAreaId = localStorage.getItem("restPlaceId");
+console.log("restAREA::: ", restAreaId);
+
+
+const response = await axios
+    .get(`http://15.164.44.233:8080/rest-area/${restAreaId}/restaurants/names`, {})
+    .then((data) => {
+      console.log("successsss2");
+      console.log(data);
+    })
+    .catch(error => {
+        console.log(error);
+
+    });
 
 var RestaurantList = [
   "풀초롱 밥상",
