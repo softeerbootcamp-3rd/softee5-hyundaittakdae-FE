@@ -17,6 +17,16 @@
     <script defer src="/js/components/back.js"></script>
     <script defer src="/js/components/dropdown.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw1ZBbZLRARjidn3WHiKdlJThB3a-uGdE"></script>
+    <script defer src="/js/toast.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>휴게소를 부탁해</title>
@@ -52,10 +62,10 @@
             <div id="RatingBigBox">
               <div id="EntireRow">
                 <div id="plusInfoWrapper">
-                  <i
-                    class="fas fa-utensils"
-                    style="margin-right: 8px; color: #6ccae1"
-                  ></i>
+                  <img
+                    id="themeLogo"
+                    src="/assets/img/themeImg/purplefood.png"
+                  />
                   <p id="plusInfo">음식이 맛있어요</p>
                 </div>
                 <div class="rightStar">
@@ -156,10 +166,10 @@
               <div>
                 <div id="EntireRow">
                   <div id="plusInfoWrapper">
-                    <i
-                      class="fas fa-utensils"
-                      style="margin-right: 8px; color: #6ccae1"
-                    ></i>
+                    <img
+                      id="themeLogo"
+                      src="/assets/img/themeImg/purpleplace.png"
+                    />
                     <p id="plusInfo">시설이 편리해요</p>
                   </div>
                   <div class="rightStar">
@@ -261,10 +271,11 @@
               <div>
                 <div id="EntireRow">
                   <div id="plusInfoWrapper">
-                    <i
-                      class="fas fa-utensils"
-                      style="margin-right: 8px; color: #6ccae1"
-                    ></i>
+                    <img
+                      id="themeLogo"
+                      src="/assets/img/themeImg/purplebathroom.png"
+                      style="width: 16px; height: 16px"
+                    />
                     <p id="plusInfo">화장실이 깨끗해요</p>
                   </div>
                   <div class="rightStar">
@@ -366,10 +377,10 @@
               <div>
                 <div id="EntireRow">
                   <div id="plusInfoWrapper">
-                    <i
-                      class="fas fa-utensils"
-                      style="margin-right: 8px; color: #6ccae1"
-                    ></i>
+                    <img
+                      id="themeLogo"
+                      src="/assets/img/themeImg/purplemood.png"
+                    />
                     <p id="plusInfo">분위기가 특별해요</p>
                   </div>
                   <div class="rightStar">
@@ -476,10 +487,11 @@
               식사를 하셨다면 음식 후기도 남겨주세요!
             </div>
             <div id="triangle-down"></div>
+            <button id="lineBtn" style="margin-bottom: 8px">
+              먹은 메뉴도 평가할래요
+            </button>
 
-            <button id="writeReviewBtn">먹은 메뉴도 평가할래요</button>
-
-            <button id="writeContinueBtn">이대로 후기 등록할래요</button>
+            <button id="fillBtn">이대로 후기 등록할래요</button>
           </div>
         </div>
       </div>

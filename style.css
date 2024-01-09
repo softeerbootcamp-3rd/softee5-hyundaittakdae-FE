@@ -153,10 +153,6 @@ input {
   border-bottom: 1px solid rgba(235, 235, 235, 1);
 }
 
-#bigTitle {
-  font-family: Semibold;
-}
-
 #backWrapper {
   width: 100%;
   height: 48px;
@@ -187,9 +183,9 @@ select {
 /* 버튼 컴포넌트 css */
 #lineBtn {
   width: 100%;
-  height: 44px;
+  height: 48px;
   font-family: "Semibold";
-  font-size: 14px;
+  font-size: 16px;
   background-color: var(--white);
   color: var(--mainColor);
   border: 0.79px solid var(--mainColor);
@@ -198,9 +194,9 @@ select {
 
 #fillBtn {
   width: 100%;
-  height: 44px;
+  height: 48px;
   font-family: "Semibold";
-  font-size: 14px;
+  font-size: 16px;
   background-color: var(--mainColor);
   color: var(--white);
   border: 0.79px solid var(--mainColor);
@@ -209,9 +205,9 @@ select {
 
 #disabledBtn {
   width: 100%;
-  height: 44px;
+  height: 48px;
   font-family: "Semibold";
-  font-size: 14px;
+  font-size: 16px;
   background-color: var(-200);
   color: var(--white);
   border: 0.79px solid var(--200);
@@ -287,4 +283,15 @@ select {
 #tinyImg {
   width: 12px;
   height: 12px;
+}
+
+#BottomBoxFixed {
+  position: fixed;
+  bottom: 36px;
+  height: auto;
+  width: 328px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 16px;
 }

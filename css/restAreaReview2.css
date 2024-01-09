@@ -1,5 +1,5 @@
 #almostEntire {
-  height: 100vh;
+  height: calc(100vh - 32.4px);
   display: flex;
   justify-content: start;
   align-items: center;
@@ -9,19 +9,17 @@
 
 #bigTitleRest {
   font-family: "Semibold";
-
+  color: var(--700);
   font-size: 14px;
   text-align: center;
   padding-left: 10px;
   padding-top: 12px;
   position: relative;
-  background-color: #f7f8fa;
 }
 
 #BottomBox {
   position: fixed;
   bottom: 0%;
-
   height: 25%;
   width: 360px;
   display: flex;

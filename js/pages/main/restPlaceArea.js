@@ -49,7 +49,7 @@ var RestAreaArr = [
 var logoUrlArr = {
   "음식이 맛있어요": "/assets/img/themeImg/purplefood.png",
   "시설이 편리해요": "/assets/img/themeImg/purpleplace.png",
-  "화장실이 깨끗해요": "/assets/img/themeImg/purplemathroom.png",
+  "화장실이 깨끗해요": "/assets/img/themeImg/purplebathroom.png",
   "분위기가 좋아요": "/assets/img/themeImg/purplemood.png",
 };
 
