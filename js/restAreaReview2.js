@@ -39,9 +39,8 @@ if (dataReceived) {
 var RestaurantList = [
   "풀초롱 밥상",
   "풀초롱 밥상머리 밥상",
-  "쳐비스",
-  "asdasd",
-  "DSfsdf",
+  "쳐비스"
+  
 ];
 /// RestaurantList 는 가변 변수다.
 
@@ -148,16 +147,18 @@ RestaurantList.forEach((item, index) => {
   Modal.appendChild(singleBtn);
   const pos = singleBtn.getBoundingClientRect();
 
-  H = pos.top;
+  console.log(pos.top);
+  if(pos.top > 240) H = 0.94* pos.top ;
   Modal.style.height = `${H}px`;
 });
 
 const inputField = document.createElement("div");
 inputField.innerHTML = `<div class="dropdown">
 <button id="dropDownBtn">메뉴를 선택해주세요</button>
-<div style="display: none" id="drop-content"></div>
+<div style="display: none;" id="drop-content"></div>
 </div>`;
 inputField.classList.add("inputBar");
+inputField.style.marginTop = "5px";
 Modal.appendChild(inputField);
 
 submit.addEventListener("click", () => {
