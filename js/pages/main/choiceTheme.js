@@ -73,7 +73,8 @@ var callThemeRestArea = (theme) => {
 
           restAreaBox.addEventListener("click", () => {
             //FIXME : 받아온 ID넣기
-            localStorage.setItem("restAreaId", data.id);
+            localStorage.setItem("restPlaceId", data.id);
+            console.log(data.id);
             window.location.href = "/detail";
           });
           restAreaList.appendChild(restAreaBox);
@@ -85,6 +86,7 @@ var callThemeRestArea = (theme) => {
   getThemeRestAreaList();
 };
 
+//
 callThemeRestArea("가까운 휴게소");
 
 choice.addEventListener("click", function () {

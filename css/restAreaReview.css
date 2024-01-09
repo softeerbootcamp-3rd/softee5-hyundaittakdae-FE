@@ -84,6 +84,15 @@ body {
   box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.02);
 }
 
+#inBox {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+
 #HowistheRest {
   height: auto;
   width: calc(100%-62px);

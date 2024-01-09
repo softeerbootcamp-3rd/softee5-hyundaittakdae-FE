@@ -20,8 +20,8 @@
   />
     <script defer src="/js/components/back.js"></script>
     <script defer src="/js/restAreaStar.js"></script>
-    <script defer src="/js/restAreaReview2.js"></script>
-    <script defer src="/js/restAreaReview1.js"></script>
+    <script defer src="/js/restAreaReview2.js" type="module"></script>
+    <script defer src="/js/restAreaReview1.js" type="module"></script>
     <script defer src="/js/components/dropdown.js"></script>
     
 
@@ -45,9 +45,13 @@
                 <div id="HowistheRest">
                     <div id="titleFont" style="margin-top:0px; margin-left:0px;">어디서 식사를 하셨나요?</div>
                     
-                  </div>
-                  <div></div>
-                  
+                </div>
+                <div id="inBox"></div>
+                
+                <div class="dropdown">
+                  <button id="dropDownBtn">메뉴를 선택해주세요</button>
+                  <div style="display: none" id="drop-content"></div>
+               </div>
             </div>
             
             

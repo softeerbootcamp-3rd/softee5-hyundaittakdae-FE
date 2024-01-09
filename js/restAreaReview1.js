@@ -100,6 +100,7 @@ const Toast = (message) => {
     if (c >= 3) {
       Toast("2개 이상 점수를 입력해주세요.");
     } else {
+      console.log(starList[0]);
       const finishJson = {
         food: parseFloat(starList[0].value) + 0.0,
         amenities: parseFloat(starList[1].value) + 0.0,
@@ -109,11 +110,11 @@ const Toast = (message) => {
       };
 
       const params = new URLSearchParams();
-      params.append("food", finishJson.food);
-      params.append("amenities", finishJson.amenities);
-      params.append("restRoom", finishJson.restRoom);
-      params.append("vibe", finishJson.vibe);
-      params.append("restAreaId", finishJson.restAreaId);
+      params.append("food", finishJson.food / 2);
+      params.append("amenities", finishJson.amenities / 2);
+      params.append("restRoom", finishJson.restRoom / 2);
+      params.append("vibe", finishJson.vibe / 2);
+      params.append("restAreaId", finishJson.restAreaId / 2);
 
       const response = await axios
         .get(
@@ -132,11 +133,3 @@ const Toast = (message) => {
     }
   });
 })();
-/*
-const response = await axios
-    .get(`http://15.164.44.233:8080/rest-areas/${choicePlaceId}/details`, {})
-    .then((data) => {
-
-    });
-
-*/
