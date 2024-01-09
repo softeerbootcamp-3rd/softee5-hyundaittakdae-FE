@@ -88,11 +88,40 @@ RestaurantList.forEach((item, index) => {
       }
     } else {
         if(SELECTED.length >= 1){
+            /*
             event.target.style.background = lightgray;
             event.target.style.color = grayText;
             event.target.style.border = `0.79px solid #999ba5`;
             Toast('한개만 선택 가능합니다.');
             done = true;
+
+            */
+
+            const elements = document.getElementsByClassName('RestaurantBtn'); // Selects all elements, adjust the selector if necessary
+            var elementToErase;
+            for (const element of elements) {
+                if (element.innerText.includes(`${SELECTED[0]}`)) {
+                    console.log("erase: ", element);
+                    elementToErase = element;
+                    break; // Stop the loop once the first matching element is found
+                }
+            }
+            
+            for (let i = 0; i < SELECTED.length; i++) {
+                if (SELECTED[i] === SELECTED[0]) {
+                  SELECTED.splice(i, 1);
+                }
+            }
+            elementToErase.style.background = lightgray;
+            elementToErase.style.color = grayText;
+            elementToErase.style.border = `0.79px solid #999ba5`;
+
+            event.target.style.background = lightblue;
+            event.target.style.color = skyblue;
+            event.target.style.border = `0.79px solid ${skyblue}`;
+            SELECTED.push(event.target.innerText);
+            done = true;
+
         }
        else SELECTED.push(event.target.innerText);
 
