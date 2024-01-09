@@ -3,7 +3,7 @@ var choice = document.getElementById("choiceTheme");
 var plusFileUrl = "/assets/img/themeImg/";
 
 choice.addEventListener("click", function () {
-  if (choice.textContent !== "모든 휴게소") {
+  if (choice.textContent !== "가까운 휴게소") {
     var beforeImgTag = choice.getElementsByTagName("img");
     var newImgUrl = beforeImgTag[0].src;
     var newUrl =
@@ -16,7 +16,7 @@ choice.addEventListener("click", function () {
   choice = this;
   choice.id = "choiceTheme";
 
-  if (choice.textContent !== "모든 휴게소") {
+  if (choice.textContent !== "가까운 휴게소") {
     var beforeImgTag = choice.getElementsByTagName("img");
     var newImgUrl = beforeImgTag[0].src;
     var newUrl =
@@ -27,7 +27,7 @@ choice.addEventListener("click", function () {
 //"/assets/img/themeImg/graybathroom.png"
 unChoiceThemes.forEach((unChoiceTheme) => {
   unChoiceTheme.addEventListener("click", function () {
-    if (choice.textContent !== "모든 휴게소") {
+    if (choice.textContent !== "가까운 휴게소") {
       var beforeImgTag = choice.getElementsByTagName("img");
       var newImgUrl = beforeImgTag[0].src;
       var newUrl =
@@ -40,7 +40,7 @@ unChoiceThemes.forEach((unChoiceTheme) => {
     choice = this;
     choice.id = "choiceTheme";
 
-    if (choice.textContent !== "모든 휴게소") {
+    if (choice.textContent !== "가까운 휴게소") {
       var beforeImgTag = choice.getElementsByTagName("img");
       var newImgUrl = beforeImgTag[0].src;
       var newUrl =
