@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/css/detail.css" />
     <script defer src="/js/components/back.js"></script>
-    <script defer src="/js/pages/detail/share.js"></script>
     <script defer src="/js/pages/detail/storeListUp.js" type="module"></script>
+    <script defer src="/js/pages/detail/showRestPlaceReview.js" type="module"></script>
     <script defer src="/js/pages/detail/menuListUp.js"></script>
     <script defer src="/js/pages/detail/showRestPlaceInfo.js" type="module"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>휴게소를 부탁해</title>
   </head>
@@ -32,46 +33,14 @@
             이용자 후기
           </div>
           
-          <div id="themeBoxWrapper">
-            <div id="themeBox">
-              <div id="themeEachBox">
-                <p id="body1semibold" style="color: var(--500)">이런 점이 좋아요</p>
-                <div id="themeGoodBox">
-                  <div id="goodThemeCircle" style="margin-top: 14px;">
-                    <img src="/assets/img/themeImg/mainColorFood.png" style="width: 23.5px; height: 23.5px;"></img>
-                  </div>
-                  <p id="goodValue" style="color: var(--600); font-family: 'Semibold'; font-size: 14px; margin-top: 9px;">음식이 맛있어요</p>
-                  <div id="themeScoreBox" style="margin-top: 9px;">
-                    <img src="/assets/img/mainStar.png" style="width: 13.6px; height: 13.6px;margin-right: 4px; margin-bottom: 1px;"/>
-                    <div id="smallThemeScore" style="margin-bottom: 1px;">4.3</div>
-                  </div>
-                </div>
-              </div>
-              <div id="themeEachBox">
-                <p id="body1semibold" style="color: var(--500)">이런 점이 아쉬워요</p>
-                <div id="themeBadBox">
-                  <div id="badThemeCircle" style="margin-top: 14px;">
-                    <img src="/assets/img/badTheme.png" style="width: 23.5px; height: 23.5px;"></img>
-                  </div>
-                  
-                  <p id="goodValue" style="color: var(--600); font-family: 'Semibold'; font-size: 14px; margin-top: 9px;">시설이 불편해요</p>
-                  <div id="themeScoreBox" style="margin-top: 9px;">
-                    <img src="/assets/img/mainStar.png" style="width: 13.6px; height: 13.6px;margin-right: 4px; margin-bottom: 1px;"/>
-                    <div id="smallThemeScore" style="margin-bottom: 1px;">1.2</div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
+          <div id="themeBoxWrapper"></div>
           <div id="totalScoreBox">
             <div id="scoreBox">
               <div id="graySemi">휴게소 전체 평점</div>
               <div id="longGrayLine"></div>
               <img src="/assets/img/mainStar.png" style="width: 16.8px; height: 16.8px;margin-right: 4px; margin-bottom: 1px;"/>
-              <div id="totalScore">4.3</div>
-              <div id="reviewCountValue">(299)</div>
+              <div id="totalScore"></div>
+              <div id="reviewCountValue"></div>
             </div>
             <img style="width: 20px; height: 20px; margin-right: 8px;" src="/assets/img/frontArrow.png"></img>
           </div>

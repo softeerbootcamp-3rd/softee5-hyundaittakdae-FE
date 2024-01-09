@@ -11,7 +11,6 @@ async function getRestInfo() {
     .get(`http://15.164.44.233:8080/rest-areas/${choicePlaceId}/details`, {})
     .then((data) => {
       let restInfo = data.data.result;
-      // FIXME : 여기 Url로 수정
       restPlaceImg.style.background = `url(${restInfo.imageUrl}) lightgray -53.113px 0px / 129.507% 100% no-repeat`;
 
       glassBox.innerHTML = `

@@ -106,15 +106,3 @@ RestAreaArr.forEach((data, idx) => {
   });
   restAreaList.appendChild(restAreaBox);
 });
-
-async function getRestaurantList() {
-  const response = await axios
-    .get("http://15.164.44.233:8080/rest-areas/1/restaurants", {})
-    .then((data) => {
-      console.log(data);
-    });
-
-  return response;
-}
-
-console.log(getRestaurantList());

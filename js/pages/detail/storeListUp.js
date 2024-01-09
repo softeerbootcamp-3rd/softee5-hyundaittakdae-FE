@@ -2,30 +2,59 @@ import axios from "axios";
 
 var storeNameList;
 var foodList = [];
-var menuList = [
-  {
-    menuImg: "/assets/img/exFoodImg.png",
-    menuName: "매운 마제소바",
-    menuScore: 4.8,
-    menuPrice: "8,000",
-  },
-  {
-    menuImg: "/assets/img/exFoodImg.png",
-    menuName: "매운 마제소바",
-    menuScore: 4.8,
-    menuPrice: "8,000",
-  },
-  {
-    menuImg: "/assets/img/exFoodImg.png",
-    menuName: "매운 마제소바",
-    menuScore: 4.8,
-    menuPrice: "8,000",
-  },
-];
 
+async function getPopluarMenuList() {
+  var restAreaId = localStorage.getItem("restPlaceId");
+  const response = await axios
+    .get(`http://15.164.44.233:8080/rest-areas/${restAreaId}/stores`, {})
+    .then((data) => {
+      console.log("인기메뉴:", data.data.result);
+
+      var menuListUpWrapper = document.getElementById("menuListUpWrapper");
+      menuListUpWrapper.innerHTML = "";
+      data.data.result.reverse().forEach((menu) => {
+        var menuBox = document.createElement("div");
+        menuBox.id = "menuBox";
+        menuBox.style.marginBottom = "20px";
+        menuBox.innerHTML = `
+        <img id="mediumImg" src="${menu.menuImg}" />
+                  <div id="menuInfoWrapper">
+                    <div id="menuName">
+                      ${menu.name}
+                    </div>
+                    <div id="sideBetween" style="margin-top: 8px">
+                      <div style="display: flex">
+                        <img
+                          id="basicImg"
+                          src="/assets/img/mainStar.png"
+                          style="margin-right: 4px; margin-bottom: 2px"
+                        />
+                        <div id="menuScore">${menu.rating}</div>
+                      </div>
+                      <div id="menuPrice" style="display: flex">
+                        ${menu.price}
+                        <div>원</div>
+                      </div>
+                    </div>
+                  </div>
+      `;
+
+        menuListUpWrapper.appendChild(menuBox);
+      });
+    });
+
+  return response;
+}
+
+getPopluarMenuList();
 //총 인기 메뉴 부분에 들어갈 상위 3개 컴포 집어넣는 함수;
 var popularBtn = document.getElementById("choiceStore");
-popularBtn.addEventListener("click", () => {});
+popularBtn.addEventListener("click", () => {
+  let choiceStore = document.getElementById("choiceStore");
+  choiceStore.id = "unChoiceStore";
+  popularBtn.id = "choiceStore";
+  getPopluarMenuList();
+});
 
 async function getRestaurantList() {
   foodList = [];
