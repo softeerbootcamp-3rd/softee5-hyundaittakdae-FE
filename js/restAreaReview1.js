@@ -41,7 +41,7 @@ finishBtn.addEventListener("click", () => {
   if (starList[2].value === "0") c++;
   if (starList[3].value === "0") c++;
   if (c >= 3) {
-    Toast("모든 항목에 대해 별점을 매겨야 합니다.");
+    Toast("2개 이상 점수를 입력해주세요.");
   } else {
     localStorage.setItem("myData", JSON.stringify(finishJson));
     window.location.href = "/reviewComplete";
@@ -60,10 +60,9 @@ notFinishBtn.addEventListener("click", () => {
   if (starList[2].value === "0") c++;
   if (starList[3].value === "0") c++;
   if (c >= 3) {
-    Toast("두개 이상의 점수를 입력해야합니다.");
+    Toast("2개 이상 점수를 입력해주세요.");
   } else {
     localStorage.setItem("myData", JSON.stringify(finishJson));
-
     window.location.href = "/restAreaReview2";
   }
 });
