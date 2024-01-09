@@ -35,12 +35,12 @@ finishBtn.addEventListener("click", () => {
   finishJson["시설이 편리해요"] = starList[1].value;
   finishJson["화장실이 깨끗해요"] = starList[2].value;
   finishJson["분위기가 특별해요"] = starList[3].value;
-  if (
-    starList[0].value === "0" ||
-    starList[1].value === "0" ||
-    starList[2].value === "0" ||
-    starList[3].value === "0"
-  ) {
+  var c = 0;
+   if(starList[0].value === "0") c++;
+   if(starList[1].value === "0") c++;
+   if(starList[2].value === "0") c++;
+   if(starList[3].value === "0") c++;
+   if(c>=3){
     Toast("모든 항목에 대해 별점을 매겨야 합니다.");
   } else {
     localStorage.setItem("myData", JSON.stringify(finishJson));
@@ -54,12 +54,12 @@ notFinishBtn.addEventListener("click", () => {
   finishJson["화장실이 깨끗해요"] = starList[2].value;
   finishJson["분위기가 특별해요"] = starList[3].value;
 
-  if (
-    starList[0].value === "0" ||
-    starList[1].value === "0" ||
-    starList[2].value === "0" ||
-    starList[3].value === "0"
-  ) {
+  var c = 0;
+   if(starList[0].value === "0") c++;
+   if(starList[1].value === "0") c++;
+   if(starList[2].value === "0") c++;
+   if(starList[3].value === "0") c++;
+   if(c>=3){
     Toast("모든 항목에 대해 별점을 매겨야 합니다.");
   } else {
     localStorage.setItem("myData", JSON.stringify(finishJson));
