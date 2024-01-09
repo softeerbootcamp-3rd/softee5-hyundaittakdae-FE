@@ -96,20 +96,22 @@
   width: 96px;
   height: 96px;
   border-radius: 4px;
-  background: url("/assets/img/restPlace.png"), lightgray 50% / cover no-repeat;
   background-size: cover;
   display: flex;
   align-items: flex-end;
+  position: relative;
 }
 
 #restAreaDisSection {
-  width: 100%;
+  width: 96px;
   height: 24px;
+  top: 300px;
   border-radius: 0px 0px 4px 4px;
   background: rgba(32, 32, 38, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
 }
 
 #themeWrapper {
