@@ -1,27 +1,31 @@
-const storeNameList = [
-  "인기메뉴",
-  "음식점1",
-  "음식점2",
-  "음식점3",
-  "음식점4",
-  "음식점5",
-  "음식점6",
-  "음식점7",
-  "음식점8",
-  "음식점9",
-];
+import axios from "axios";
 
-var storeSideBar = document.getElementById("storeSideBar");
-storeNameList.forEach((storeName, index) => {
-  let storeTag = document.createElement("div");
-  storeTag.id = index === 0 ? "choiceStore" : "unChoiceStore";
+var storeNameList;
+var foodList = [];
 
-  storeTag.textContent = storeName;
-  storeTag.addEventListener("click", function () {
-    let choiceStore = document.getElementById("choiceStore");
-    choiceStore.id = "unChoiceStore";
-    storeTag.id = "choiceStore";
-    console.log("Clicked on store: " + storeName);
-  });
-  storeSideBar.appendChild(storeTag);
-});
+async function getRestaurantList() {
+  foodList = [];
+  const response = await axios
+    .get("http://15.164.44.233:8080/rest-areas/7/restaurants", {})
+    .then((data) => {
+      storeNameList = data.data.result;
+
+      var storeSideBar = document.getElementById("storeSideBar");
+      storeNameList.forEach((store, index) => {
+        let storeTag = document.createElement("div");
+        storeTag.id = index === 0 ? "choiceStore" : "unChoiceStore";
+
+        storeTag.textContent = store.restaurantName;
+        storeTag.addEventListener("click", function () {
+          let choiceStore = document.getElementById("choiceStore");
+          choiceStore.id = "unChoiceStore";
+          storeTag.id = "choiceStore";
+        });
+        storeSideBar.appendChild(storeTag);
+      });
+    });
+
+  return response;
+}
+
+getRestaurantList();

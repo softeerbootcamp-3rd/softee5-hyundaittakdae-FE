@@ -135,8 +135,7 @@ var callThemeRestArea = (theme) => {
     </div>
   </div>`;
     restAreaBox.addEventListener("click", () => {
-      localStorage.setItem("restAreaId", data.restAreaId);
-      localStorage.setItem("restAreaName", data.restAreaName);
+      localStorage.setItem("restAreaId", 7);
       window.location.href = "/detail.html";
     });
     restAreaList.appendChild(restAreaBox);

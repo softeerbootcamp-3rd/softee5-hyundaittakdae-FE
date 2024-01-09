@@ -101,7 +101,7 @@ RestAreaArr.forEach((data, idx) => {
   </div>
 </div>`;
   restAreaBox.addEventListener("click", () => {
-    localStorage.setItem("restAreaName", data.restAreaName);
+    localStorage.setItem("restPlaceId", 7);
     window.location.href = "/detail.html";
   });
   restAreaList.appendChild(restAreaBox);
