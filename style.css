@@ -121,7 +121,6 @@ input {
   overflow-x: hidden;
   overflow-y: hidden;
   width: 360px;
-  min-width: 360px;
   height: auto;
 }
 

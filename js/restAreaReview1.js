@@ -36,11 +36,11 @@ finishBtn.addEventListener("click", () => {
   finishJson["화장실이 깨끗해요"] = starList[2].value;
   finishJson["분위기가 특별해요"] = starList[3].value;
   var c = 0;
-   if(starList[0].value === "0") c++;
-   if(starList[1].value === "0") c++;
-   if(starList[2].value === "0") c++;
-   if(starList[3].value === "0") c++;
-   if(c>=3){
+  if (starList[0].value === "0") c++;
+  if (starList[1].value === "0") c++;
+  if (starList[2].value === "0") c++;
+  if (starList[3].value === "0") c++;
+  if (c >= 3) {
     Toast("모든 항목에 대해 별점을 매겨야 합니다.");
   } else {
     localStorage.setItem("myData", JSON.stringify(finishJson));
@@ -49,20 +49,21 @@ finishBtn.addEventListener("click", () => {
 });
 
 notFinishBtn.addEventListener("click", () => {
-  finishJson["음식이 다양해요"] = starList[0].value;
-  finishJson["시설이 편리해요"] = starList[1].value;
-  finishJson["화장실이 깨끗해요"] = starList[2].value;
-  finishJson["분위기가 특별해요"] = starList[3].value;
+  finishJson["음식이 다양해요"] = starList[0].value / 2;
+  finishJson["시설이 편리해요"] = starList[1].value / 2;
+  finishJson["화장실이 깨끗해요"] = starList[2].value / 2;
+  finishJson["분위기가 특별해요"] = starList[3].value / 2;
 
   var c = 0;
-   if(starList[0].value === "0") c++;
-   if(starList[1].value === "0") c++;
-   if(starList[2].value === "0") c++;
-   if(starList[3].value === "0") c++;
-   if(c>=3){
-    Toast("모든 항목에 대해 별점을 매겨야 합니다.");
+  if (starList[0].value === "0") c++;
+  if (starList[1].value === "0") c++;
+  if (starList[2].value === "0") c++;
+  if (starList[3].value === "0") c++;
+  if (c >= 3) {
+    Toast("두개 이상의 점수를 입력해야합니다.");
   } else {
     localStorage.setItem("myData", JSON.stringify(finishJson));
+
     window.location.href = "/restAreaReview2";
   }
 });
