@@ -30,6 +30,9 @@ function showPosition(position) {
         } else if (addressComponents.length === 6) {
           city = addressComponents[3].long_name;
           district = addressComponents[2].long_name;
+        } else if (addressComponents.length === 7) {
+          city = addressComponents[4].long_name;
+          district = addressComponents[3].long_name;
         }
 
         document.getElementById("curPlaceName").innerText =
