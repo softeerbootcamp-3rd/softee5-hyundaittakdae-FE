@@ -30,7 +30,8 @@ var callThemeRestArea = (theme) => {
           var restAreaBox = document.createElement("div");
           restAreaBox.id = "restAreaBox";
           restAreaBox.innerHTML = `<div id="contentArea">
-          <img id="restAreaImg" src="${data.imageUrl}">
+          <div id="inBox">
+          <img id="restAreaImg" src="${data.imageUrl}"></img>
             <div id="restAreaDisSection">
               <img
                 src="/assets/img/whiteLoaction.png"
@@ -38,7 +39,7 @@ var callThemeRestArea = (theme) => {
               />
               <p id="restAreaDisValue">${data.distance}km</p>
             </div>
-          </img>
+          </div>
           <div id="contentInfoWrapper">
             <div id="themeWrapper">
               <img

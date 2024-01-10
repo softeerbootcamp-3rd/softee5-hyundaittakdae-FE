@@ -60,7 +60,7 @@ RestAreaArr.forEach((data, idx) => {
   var restAreaBox = document.createElement("div");
   restAreaBox.id = "restAreaBox";
   restAreaBox.innerHTML = `<div id="contentArea">
-  <div id="restAreaImg" src="≈">
+  <div id="restAreaImg" src="${data.imageUrl}">
     <div id="restAreaDisSection">
       <img
         src="/assets/img/whiteLoaction.png"
