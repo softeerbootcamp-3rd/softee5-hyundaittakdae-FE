@@ -17,7 +17,7 @@ async function getPopluarMenuList() {
         menuBox.id = "menuBox";
         menuBox.style.marginBottom = "20px";
         menuBox.innerHTML = `
-        <img id="mediumImg" src="${menu.menuImg}" />
+        <img id="mediumImg" src="${menu.imageUrl}" />
                   <div id="menuInfoWrapper">
                     <div id="menuName">
                       ${menu.name}
@@ -58,8 +58,9 @@ popularBtn.addEventListener("click", () => {
 
 async function getRestaurantList() {
   foodList = [];
+  var restPlaceId = localStorage.getItem("restPlaceId");
   const response = await axios
-    .get("http://15.164.44.233:8080/rest-areas/1/restaurants", {})
+    .get(`http://15.164.44.233:8080/rest-areas/${restPlaceId}/restaurants`, {})
     .then((data) => {
       storeNameList = data.data.result;
       console.log(storeNameList);

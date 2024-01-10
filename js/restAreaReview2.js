@@ -23,10 +23,9 @@ const Toast = (message) => {
   }).showToast();
 };
 
-
 const dataReceived = JSON.parse(localStorage.getItem("myData"));
 
-const submit = document.querySelector("#writeContinueBtn");
+const submit = document.getElementById("writeContinueBtn");
 
 if (dataReceived) {
   // Use the data
@@ -36,12 +35,7 @@ if (dataReceived) {
   // Handle the case where data is not available
 }
 
-var RestaurantList = [
-  "풀초롱 밥상",
-  "풀초롱 밥상머리 밥상",
-  "쳐비스"
-  
-];
+var RestaurantList = ["온화분식", "엄마 손맛"];
 /// RestaurantList 는 가변 변수다.
 
 const SELECTED = [];
@@ -74,7 +68,6 @@ RestaurantList.forEach((item, index) => {
   singleBtn.innerText = item;
   singleBtn.style.marginBottom = `0px`;
 
-
   singleBtn.addEventListener("click", (event) => {
     var backgroundColor = window.getComputedStyle(event.target).backgroundColor;
 
@@ -86,8 +79,8 @@ RestaurantList.forEach((item, index) => {
         }
       }
     } else {
-        if(SELECTED.length >= 1){
-            /*
+      if (SELECTED.length >= 1) {
+        /*
             event.target.style.background = lightgray;
             event.target.style.color = grayText;
             event.target.style.border = `0.79px solid #999ba5`;
@@ -96,46 +89,43 @@ RestaurantList.forEach((item, index) => {
 
             */
 
-            const elements = document.getElementsByClassName('RestaurantBtn'); // Selects all elements, adjust the selector if necessary
-            var elementToErase;
-            for (const element of elements) {
-                if (element.innerText.includes(`${SELECTED[0]}`)) {
-                    console.log("erase: ", element);
-                    elementToErase = element;
-                    break; // Stop the loop once the first matching element is found
-                }
-            }
-            
-            for (let i = 0; i < SELECTED.length; i++) {
-                if (SELECTED[i] === SELECTED[0]) {
-                  SELECTED.splice(i, 1);
-                }
-            }
-            elementToErase.style.background = lightgray;
-            elementToErase.style.color = grayText;
-            elementToErase.style.border = `0.79px solid #999ba5`;
-
-            event.target.style.background = lightblue;
-            event.target.style.color = skyblue;
-            event.target.style.border = `0.79px solid ${skyblue}`;
-            SELECTED.push(event.target.innerText);
-            done = true;
-
+        const elements = document.getElementsByClassName("RestaurantBtn"); // Selects all elements, adjust the selector if necessary
+        var elementToErase;
+        for (const element of elements) {
+          if (element.innerText.includes(`${SELECTED[0]}`)) {
+            console.log("erase: ", element);
+            elementToErase = element;
+            break; // Stop the loop once the first matching element is found
+          }
         }
-       else SELECTED.push(event.target.innerText);
 
-    }
-    if(done === false){
-        if (backgroundColor === lightgray) {
+        for (let i = 0; i < SELECTED.length; i++) {
+          if (SELECTED[i] === SELECTED[0]) {
+            SELECTED.splice(i, 1);
+          }
+        }
+        elementToErase.style.background = lightgray;
+        elementToErase.style.color = grayText;
+        elementToErase.style.border = `0.79px solid #999ba5`;
+
         event.target.style.background = lightblue;
         event.target.style.color = skyblue;
         event.target.style.border = `0.79px solid ${skyblue}`;
-        } else {
+        SELECTED.push(event.target.innerText);
+        done = true;
+      } else SELECTED.push(event.target.innerText);
+    }
+    if (done === false) {
+      if (backgroundColor === lightgray) {
+        event.target.style.background = lightblue;
+        event.target.style.color = skyblue;
+        event.target.style.border = `0.79px solid ${skyblue}`;
+      } else {
         event.target.style.background = lightgray;
         event.target.style.color = grayText;
         event.target.style.border = `0.79px solid #999ba5`;
-        }
-        done = true;
+      }
+      done = true;
     }
     selectedJson = {
       selected: SELECTED,
@@ -148,7 +138,7 @@ RestaurantList.forEach((item, index) => {
   const pos = singleBtn.getBoundingClientRect();
 
   console.log(pos.top);
-  if(pos.top > 240) H = 0.94* pos.top ;
+  if (pos.top > 240) H = 0.94 * pos.top;
   Modal.style.height = `${H}px`;
 });
 
@@ -162,22 +152,6 @@ inputField.style.marginTop = "5px";
 Modal.appendChild(inputField);
 
 submit.addEventListener("click", () => {
-
-  if(SELECTED.length !== 1){
-     
-    Toast('식사하신 한군데를 선택해 주세요');
-        
-  }
-
-  var appending = [];
-  console.log(Star[0].value);
-  for (let i = 0; i < Star.length; i++) {
-    appending.push({
-      [`${selectedJson["selected"][i]}`]: Star[i].value,
-    });
-  }
-  dataReceived["selected"] = appending;
-  console.log(dataReceived);
-
-  var finalJson = dataReceived;
+  window.location.href = "/reviewComplete.html";
+  console.log("click");
 });

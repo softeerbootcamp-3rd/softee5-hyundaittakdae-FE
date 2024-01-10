@@ -1,4 +1,4 @@
-var foodArr = ["소떡소떡", "햄버거", "알감자", "떡볶이", "우동"];
+var foodArr = ["떡볶이", "만두", "비빔칼국수"];
 var dropContent = document.getElementById("drop-content");
 
 foodArr.forEach((food) => {
