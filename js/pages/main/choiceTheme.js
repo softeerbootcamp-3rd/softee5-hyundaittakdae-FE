@@ -32,7 +32,7 @@ var callThemeRestArea = (theme) => {
           restAreaBox.id = "restAreaBox";
           restAreaBox.innerHTML = `
           <div id="contentArea">
-          <div id="imgBox" src="${data.imageUrl}">
+          <div id="imgBox">
             <img id="restAreaImg" src="${data.imageUrl}"/> 
             <div id="restAreaDisSection">
               <img
