@@ -73,6 +73,27 @@ finishBtn.addEventListener("click", async () => {
 });
 
 var restAreaId = localStorage.getItem("restPlaceId");
+var RestPlaceInfoBanner = document.getElementById("RestPlaceInfoBanner");
+async function getRestPlace() {
+  const response = await axios
+    .get(`http://15.164.44.233:8080/rest-areas/${restAreaId}/details`, {})
+    .then((data) => {
+      let info = data.data.result;
+      console.log(data.data.result);
+      RestPlaceInfoBanner.innerHTML = `
+        <img id="smallImage" src="${info.imageUrl}"></img>
+            <div id="rightSide">
+              <div id="titleFont" style="margin-bottom: 0px; font-size: 14px">
+                ${info.name}
+              </div>
+              <div id="graySemiMargin">${info.roadName}</div>
+        </div>
+      `;
+    });
+  return response;
+}
+
+getRestPlace();
 
 notFinishBtn.addEventListener("click", async () => {
   finishJson["음식이 다양해요"] = starList[0].value / 2;

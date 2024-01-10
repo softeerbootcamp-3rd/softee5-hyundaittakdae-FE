@@ -11,14 +11,18 @@ var logoUrlArr = {
 };
 
 var callThemeRestArea = (theme) => {
-  var themeNum;
-  if (theme == "가까운 휴게소") themeNum = 0;
-  else if (theme == "음식이 맛있어요") themeNum = 1;
-  else if (theme == "시설이 편리해요") themeNum = 2;
-  else if (theme == "화장실이 깨끗해요") themeNum = 3;
-  else themeNum = 4;
+  console.log(theme);
 
   async function getThemeRestAreaList() {
+    var themeNum;
+    theme = theme.trim();
+    if (theme === "가까운 휴게소") themeNum = 0;
+    else if (theme === "음식이 맛있어요") themeNum = 1;
+    else if (theme === "시설이 편리해요") themeNum = 2;
+    else if (theme === "화장실이 깨끗해요") themeNum = 3;
+    else themeNum = 4;
+    console.log(theme, themeNum);
+
     const response = await axios
       .get(`http://15.164.44.233:8080/rest-areas/${themeNum}`, {})
       .then((data) => {
@@ -102,6 +106,7 @@ choice.addEventListener("click", function () {
   choice = this;
   choice.id = "choiceTheme";
   // 고른거 백엔드 호출
+  console.log("theme:" + choice.textContent);
   callThemeRestArea(choice.textContent);
 
   if (choice.textContent !== "가까운 휴게소") {
@@ -130,7 +135,7 @@ unChoiceThemes.forEach((unChoiceTheme) => {
 
     // 고른거 백엔드 호출
     callThemeRestArea(choice.textContent);
-
+    console.log(choice.textContent);
     if (choice.textContent !== "가까운 휴게소") {
       var beforeImgTag = choice.getElementsByTagName("img");
       var newImgUrl = beforeImgTag[0].src;

@@ -35,7 +35,7 @@ if (dataReceived) {
   // Handle the case where data is not available
 }
 
-var RestaurantList = ["온화분식", "엄마 손맛"];
+var RestaurantList = ["온화 분식", "엄마 손맛", "감성 식당"];
 /// RestaurantList 는 가변 변수다.
 
 const SELECTED = [];
