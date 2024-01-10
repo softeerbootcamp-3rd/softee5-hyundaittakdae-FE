@@ -102,16 +102,22 @@
   position: relative;
 }
 
+#imgBox {
+  position: relative;
+}
+
 #restAreaDisSection {
   width: 96px;
   height: 24px;
-  top: 300px;
   border-radius: 0px 0px 4px 4px;
   background: rgba(32, 32, 38, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
+  top: 83%;
+  left: 0;
+  transform: translateY(-50%);
 }
 
 #themeWrapper {

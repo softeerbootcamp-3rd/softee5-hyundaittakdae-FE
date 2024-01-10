@@ -27,10 +27,13 @@ var callThemeRestArea = (theme) => {
         var restAreaList = document.getElementById("restAreaList");
         restAreaList.innerHTML = "";
         RestAreaArr.forEach((data, idx) => {
+          console.log(data);
           var restAreaBox = document.createElement("div");
           restAreaBox.id = "restAreaBox";
-          restAreaBox.innerHTML = `<div id="contentArea">
-          <img id="restAreaImg" src="${data.imageUrl}">
+          restAreaBox.innerHTML = `
+          <div id="contentArea">
+          <div id="imgBox" src="${data.imageUrl}">
+            <img id="restAreaImg" src="${data.imageUrl}"/> 
             <div id="restAreaDisSection">
               <img
                 src="/assets/img/whiteLoaction.png"
@@ -38,7 +41,7 @@ var callThemeRestArea = (theme) => {
               />
               <p id="restAreaDisValue">${data.distance}km</p>
             </div>
-          </img>
+          </div>
           <div id="contentInfoWrapper">
             <div id="themeWrapper">
               <img
