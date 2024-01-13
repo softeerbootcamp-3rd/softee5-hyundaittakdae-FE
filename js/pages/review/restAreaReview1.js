@@ -1,9 +1,7 @@
 import axios from "axios";
 const scriptElement = document.createElement("script");
-// src 속성을 설정합니다.
 scriptElement.src = "https://cdn.jsdelivr.net/npm/toastify-js";
 
-// script 요소를 head에 추가하여 스크립트를 로드합니다.
 document.head.appendChild(scriptElement);
 
 const Toast = (message) => {
@@ -13,12 +11,12 @@ const Toast = (message) => {
     destination: "https://github.com/apvarun/toastify-js",
     newWindow: true,
     close: false,
-    gravity: "bottom", // `top` or `bottom`
-    position: "center", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
+    gravity: "bottom",
+    position: "center",
+    stopOnFocus: true,
     style: {},
     backgroundColor: "rgba(82, 180, 204, 1)",
-    onClick: function () {}, // Callback after click
+    onClick: function () {},
   }).showToast();
 };
 
@@ -30,7 +28,6 @@ const starList = document.getElementsByTagName("input");
 var finishJson = {};
 
 var restAreaId = localStorage.getItem("restPlaceId");
-console.log("restAREA:: ", restAreaId);
 
 finishBtn.addEventListener("click", async () => {
   console.log("restArea: ");
@@ -59,7 +56,6 @@ async function getRestPlace() {
     .get(`http://15.164.44.233:8080/rest-areas/${restAreaId}/details`, {})
     .then((data) => {
       let info = data.data.result;
-      console.log(data.data.result);
       RestPlaceInfoBanner.innerHTML = `
         <img id="smallImage" src="${info.imageUrl}"></img>
             <div id="rightSide">

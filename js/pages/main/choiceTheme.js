@@ -11,8 +11,6 @@ var logoUrlArr = {
 };
 
 var callThemeRestArea = (theme) => {
-  console.log(theme);
-
   async function getThemeRestAreaList() {
     var themeNum;
     theme = theme.trim();
@@ -21,12 +19,10 @@ var callThemeRestArea = (theme) => {
     else if (theme === "시설이 편리해요") themeNum = 2;
     else if (theme === "화장실이 깨끗해요") themeNum = 3;
     else themeNum = 4;
-    console.log(theme, themeNum);
 
     const response = await axios
       .get(`http://15.164.44.233:8080/rest-areas/${themeNum}`, {})
       .then((data) => {
-        console.log(data.data.result);
         var RestAreaArr = data.data.result;
         var restAreaList = document.getElementById("restAreaList");
         restAreaList.innerHTML = "";
@@ -77,7 +73,6 @@ var callThemeRestArea = (theme) => {
         </div>`;
 
           restAreaBox.addEventListener("click", () => {
-            //FIXME : 받아온 ID넣기
             localStorage.setItem("restAreaId", data.id);
             window.location.href = "/pages/detail";
           });
@@ -105,8 +100,6 @@ choice.addEventListener("click", function () {
   choice.id = "unChoiceTheme";
   choice = this;
   choice.id = "choiceTheme";
-  // 고른거 백엔드 호출
-  console.log("theme:" + choice.textContent);
   callThemeRestArea(choice.textContent);
 
   if (choice.textContent !== "가까운 휴게소") {
@@ -133,9 +126,7 @@ unChoiceThemes.forEach((unChoiceTheme) => {
     choice = this;
     choice.id = "choiceTheme";
 
-    // 고른거 백엔드 호출
     callThemeRestArea(choice.textContent);
-    console.log(choice.textContent);
     if (choice.textContent !== "가까운 휴게소") {
       var beforeImgTag = choice.getElementsByTagName("img");
       var newImgUrl = beforeImgTag[0].src;

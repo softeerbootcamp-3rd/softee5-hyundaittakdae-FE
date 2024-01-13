@@ -1,8 +1,6 @@
 const scriptElement = document.createElement("script");
-// src 속성을 설정합니다.
 scriptElement.src = "https://cdn.jsdelivr.net/npm/toastify-js";
 
-// script 요소를 head에 추가하여 스크립트를 로드합니다.
 document.head.appendChild(scriptElement);
 
 const Toast = (message) => {
@@ -12,12 +10,12 @@ const Toast = (message) => {
     destination: "https://github.com/apvarun/toastify-js",
     newWindow: true,
     close: false,
-    gravity: "bottom", // `top` or `bottom`
-    position: "center", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
+    gravity: "bottom",
+    position: "center",
+    stopOnFocus: true,
     style: {},
     backgroundColor: "rgba(82, 180, 204, 1)",
-    onClick: function () {}, // Callback after click
+    onClick: function () {},
   }).showToast();
 };
 
@@ -25,16 +23,7 @@ const dataReceived = JSON.parse(localStorage.getItem("myData"));
 
 const submit = document.getElementById("writeContinueBtn");
 
-if (dataReceived) {
-  // Use the data
-  console.log(dataReceived);
-} else {
-  console.log("not received");
-  // Handle the case where data is not available
-}
-
 var RestaurantList = ["온화 분식", "엄마 손맛", "감성 식당"];
-/// RestaurantList 는 가변 변수다.
 
 const SELECTED = [];
 
@@ -78,22 +67,12 @@ RestaurantList.forEach((item, index) => {
       }
     } else {
       if (SELECTED.length >= 1) {
-        /*
-            event.target.style.background = lightgray;
-            event.target.style.color = grayText;
-            event.target.style.border = `0.79px solid #999ba5`;
-            Toast('한개만 선택 가능합니다.');
-            done = true;
-
-            */
-
-        const elements = document.getElementsByClassName("RestaurantBtn"); // Selects all elements, adjust the selector if necessary
-        var elementToErase;
+        const elements = document.getElementsByClassName("RestaurantBtn");
         for (const element of elements) {
           if (element.innerText.includes(`${SELECTED[0]}`)) {
             console.log("erase: ", element);
             elementToErase = element;
-            break; // Stop the loop once the first matching element is found
+            break;
           }
         }
 
@@ -128,14 +107,11 @@ RestaurantList.forEach((item, index) => {
     selectedJson = {
       selected: SELECTED,
     };
-
-    console.log(selectedJson["selected"]);
   });
 
   Modal.appendChild(singleBtn);
   const pos = singleBtn.getBoundingClientRect();
 
-  console.log(pos.top);
   if (pos.top > 240) H = 0.94 * pos.top;
   Modal.style.height = `${H}px`;
 });

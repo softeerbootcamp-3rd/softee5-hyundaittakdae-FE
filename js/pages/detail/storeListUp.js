@@ -8,8 +8,6 @@ async function getPopluarMenuList() {
   const response = await axios
     .get(`http://15.164.44.233:8080/rest-areas/${restAreaId}/stores`, {})
     .then((data) => {
-      console.log("인기메뉴:", data.data.result);
-
       var menuListUpWrapper = document.getElementById("menuListUpWrapper");
       menuListUpWrapper.innerHTML = "";
       data.data.result.reverse().forEach((menu) => {
@@ -63,7 +61,6 @@ async function getRestaurantList() {
     .get(`http://15.164.44.233:8080/rest-areas/${restPlaceId}/restaurants`, {})
     .then((data) => {
       storeNameList = data.data.result;
-      console.log(storeNameList);
 
       var storeSideBar = document.getElementById("storeSideBar");
       storeNameList.forEach((store, index) => {
@@ -76,7 +73,6 @@ async function getRestaurantList() {
           choiceStore.id = "unChoiceStore";
           storeTag.id = "choiceStore";
 
-          console.log("클릭한 가게id:", storeId);
           //여기서부터 클릭하면 각 가게에 대한 음식으로 변경;
 
           async function getRestaurantMenuList() {

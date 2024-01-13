@@ -11,7 +11,6 @@ async function getRestPlaceInfo() {
     .get(`http://15.164.44.233:8080/rest-areas/${restAreaId}/reviews`, {})
     .then((data) => {
       var restPlaceReview = data.data.result;
-      console.log(restPlaceReview);
 
       var goodImgUrl = "/assets/img/themeImg/mainColor";
       if (restPlaceReview.highestTag.tagName == "음식이 맛있어요")
