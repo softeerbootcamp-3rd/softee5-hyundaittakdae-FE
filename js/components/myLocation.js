@@ -1,4 +1,3 @@
-// 위치 정보를 가져오는 함수
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -8,12 +7,10 @@ function getLocation() {
   }
 }
 
-// 위치 정보를 표시하는 함수
 function showPosition(position) {
   var latitude = position.coords.latitude;
   var longitude = position.coords.longitude;
 
-  // Geolocation API를 이용해 주소 가져오기
   var geocoder = new google.maps.Geocoder();
   var latlng = new google.maps.LatLng(latitude, longitude);
 
@@ -44,7 +41,6 @@ function showPosition(position) {
   });
 }
 
-// 특정 주소 컴포넌트를 가져오는 함수
 function getAddressComponent(components, type) {
   for (let i = 0; i < components.length; i++) {
     const component = components[i];
@@ -61,5 +57,4 @@ callMyPlaceBtn.addEventListener("click", () => {
   console.log("내 위치 불러오기");
 });
 
-// 페이지 로드 시 위치 정보 가져오기
 getLocation();

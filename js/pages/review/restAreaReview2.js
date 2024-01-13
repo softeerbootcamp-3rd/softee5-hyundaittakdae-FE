@@ -1,5 +1,3 @@
-//import Toast from "/js/toast.js";
-// 새로운 script 요소를 생성합니다.
 const scriptElement = document.createElement("script");
 // src 속성을 설정합니다.
 scriptElement.src = "https://cdn.jsdelivr.net/npm/toastify-js";

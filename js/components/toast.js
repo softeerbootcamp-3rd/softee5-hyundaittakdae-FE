@@ -5,11 +5,11 @@ const Toast = (message) => {
     destination: "https://github.com/apvarun/toastify-js",
     newWindow: true,
     close: false,
-    gravity: "bottom", // `top` or `bottom`
-    position: "center", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
+    gravity: "bottom",
+    position: "center",
+    stopOnFocus: true,
     style: {},
     backgroundColor: "rgba(82, 180, 204, 1)",
-    onClick: function () {}, // Callback after click
+    onClick: function () {},
   }).showToast();
 };
