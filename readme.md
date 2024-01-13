@@ -7,7 +7,7 @@
 <br><br>
 
 # 🤩우리의 서비스를 구경하고 싶어요!!🤩
-> https://youtu.be/jPyMQQ-OH58
+> [휴게소를 부탁해 시연 영상](https://youtube.com/shorts/dQiLzi4rb9Y)
 
 위 URL로 접속하시면 우리의 서비스가 무엇인지 구경하실 수 있어요🤩🤩
 
