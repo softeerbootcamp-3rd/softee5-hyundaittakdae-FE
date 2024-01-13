@@ -40,7 +40,7 @@ async function getRestInfo() {
           </p>
         </div>
         <div id="sideBetween" style="margin-top: 16px">
-          <a href="/restAreaReview" id="writeReviewBtn">
+          <a href="/pages/restAreaReview" id="writeReviewBtn">
             <img
               src="/assets/img/pencil.png"
               style="width: 16px; height: 16px; margin-right: 4px"

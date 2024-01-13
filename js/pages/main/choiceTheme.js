@@ -79,7 +79,7 @@ var callThemeRestArea = (theme) => {
           restAreaBox.addEventListener("click", () => {
             //FIXME : 받아온 ID넣기
             localStorage.setItem("restAreaId", data.id);
-            window.location.href = "/detail";
+            window.location.href = "/pages/detail";
           });
           restAreaList.appendChild(restAreaBox);
         });

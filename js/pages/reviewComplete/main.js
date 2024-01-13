@@ -3,8 +3,8 @@ function goUrl(url) {
 }
 
 document.getElementById("lineBtn").addEventListener("click", () => {
-  goUrl("/mainHome");
+  goUrl("/pages/detail");
 });
 document.getElementById("fillBtn").addEventListener("click", () => {
-  goUrl("/mainHome");
+  goUrl("/pages/mainHome");
 });

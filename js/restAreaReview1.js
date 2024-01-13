@@ -48,27 +48,7 @@ finishBtn.addEventListener("click", async () => {
   if (c >= 3) {
     Toast("2개 이상 점수를 입력해주세요.");
   } else {
-    const response = await axios
-      .post(
-        `http://15.164.44.233:8080/rest-area/${restAreaId}/review`,
-        JSON.stringify({
-          food: starList[0].value / 2,
-          amenities: starList[1].value / 2,
-          restRoom: starList[2].value / 2,
-          vibe: starList[3].value / 2,
-        }),
-        { headers: { "Content-Type": "application/json" } }
-      )
-      .then((data) => {
-        console.log("succcceesss");
-        console.log(data);
-
-        //localStorage.setItem("myData", JSON.stringify(finishJson));
-        window.location.href = "/reviewComplete";
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    window.location.href = "/pages/reviewComplete";
   }
 });
 
@@ -118,15 +98,6 @@ notFinishBtn.addEventListener("click", async () => {
         vibe: starList[3].value / 2,
       })
     );
-    window.location.href = "/restAreaReview2";
+    window.location.href = "/pages/restAreaReview2";
   }
 });
-
-/*
-const response = await axios
-    .get(`http://15.164.44.233:8080/rest-areas/${choicePlaceId}/details`, {})
-    .then((data) => {
-
-    });
-
-*/

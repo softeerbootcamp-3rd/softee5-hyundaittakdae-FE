@@ -152,6 +152,5 @@ inputField.style.marginTop = "5px";
 Modal.appendChild(inputField);
 
 submit.addEventListener("click", () => {
-  window.location.href = "/reviewComplete.html";
-  console.log("click");
+  window.location.href = "/pages/reviewComplete.html";
 });
