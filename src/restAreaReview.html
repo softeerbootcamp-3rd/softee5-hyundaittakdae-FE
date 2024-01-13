@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/css/restAreaReview.css" />
+    <link rel="stylesheet" href="/css/star.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+
+    <script defer src="/js/restAreaStar.js"></script>
+    <script defer src="/js/restAreaReview1.js" type="module"></script>
+    <script defer src="/js/components/back.js"></script>
+    <script defer src="/js/toast.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>휴게소를 부탁해</title>
+  </head>
+  <body>
+    <div id="mobileWrapper">
+      <div id="app">
+        <div id="bigTitleRest">
+          <img
+            id="back"
+            src="/assets/img/backArrow.png"
+            style="width: 24px; height: 24px"
+          />
+          휴게소 후기 등록s
+        </div>
+        <div id="almostEntire">
+          <div id="RestPlaceInfoBanner"></div>
+          <div id="Modal" style="padding-bottom: 10px">
+            <div id="HowistheRest" style="margin-top: 20px">
+              <div id="titleFont">휴게소는 어떠셨나요?</div>
+              <div id="graySemi" style="margin-top: 8px; margin-bottom: 8px">
+                항목별 별점을 매겨주세요
+              </div>
+            </div>
+            <div id="RatingBigBox">
+              <div id="EntireRow">
+                <div id="plusInfoWrapper">
+                  <img
+                    id="themeLogo"
+                    src="/assets/img/themeImg/purplefood.png"
+                  />
+                  <p id="plusInfo">음식이 맛있어요</p>
+                </div>
+                <div class="rightStar">
+                  <span class="star">
+                    <i
+                      class="fas fa-star"
+                      style="
+                        font-size: 0.68em;
+                        margin-left: 2px;
+                        margin-right: 2px;
+                      "
+                    ></i>
+                    <i
+                      class="fas fa-star"
+                      style="
+                        font-size: 0.68em;
+                        margin-left: 2px;
+                        margin-right: 2px;
+                      "
+                    ></i>
+                    <i
+                      class="fas fa-star"
+                      style="
+                        font-size: 0.68em;
+                        margin-left: 2px;
+                        margin-right: 2px;
+                      "
+                    ></i>
+                    <i
+                      class="fas fa-star"
+                      style="
+                        font-size: 0.68em;
+                        margin-left: 2px;
+                        margin-right: 2px;
+                      "
+                    ></i>
+                    <i
+                      class="fas fa-star"
+                      style="
+                        font-size: 0.68em;
+                        margin-left: 2px;
+                        margin-right: 2px;
+                      "
+                    ></i>
+                    <span class="realStar">
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                    </span>
+                    <input
+                      type="range"
+                      oninput="drawStar(this)"
+                      value="0"
+                      step="1"
+                      min="0"
+                      max="10"
+                    />
+                  </span>
+                </div>
+              </div>
+              <div>
+                <div id="EntireRow">
+                  <div id="plusInfoWrapper">
+                    <img
+                      id="themeLogo"
+                      src="/assets/img/themeImg/purpleplace.png"
+                    />
+                    <p id="plusInfo">시설이 편리해요</p>
+                  </div>
+                  <div class="rightStar">
+                    <span class="star">
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <span class="realStar">
+                        <i
+                          class="fas fa-star"
+                          style="
+                            font-size: 0.68em;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                          "
+                        ></i>
+                        <i
+                          class="fas fa-star"
+                          style="
+                            font-size: 0.68em;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                          "
+                        ></i>
+                        <i
+                          class="fas fa-star"
+                          style="
+                            font-size: 0.68em;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                          "
+                        ></i>
+                        <i
+                          class="fas fa-star"
+                          style="
+                            font-size: 0.68em;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                          "
+                        ></i>
+                        <i
+                          class="fas fa-star"
+                          style="
+                            font-size: 0.68em;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                          "
+                        ></i>
+                      </span>
+                      <input
+                        type="range"
+                        oninput="drawStar(this)"
+                        value="0"
+                        step="1"
+                        min="0"
+                        max="10"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div id="EntireRow">
+                  <div id="plusInfoWrapper">
+                    <img
+                      id="themeLogo"
+                      src="/assets/img/themeImg/purplebathroom.png"
+                      style="width: 16px; height: 16px"
+                    />
+                    <p id="plusInfo">화장실이 깨끗해요</p>
+                  </div>
+                  <div class="rightStar">
+                    <span class="star">
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <span class="realStar">
+                        <i
+                          class="fas fa-star"
+                          style="
+                            font-size: 0.68em;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                          "
+                        ></i>
+                        <i
+                          class="fas fa-star"
+                          style="
+                            font-size: 0.68em;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                          "
+                        ></i>
+                        <i
+                          class="fas fa-star"
+                          style="
+                            font-size: 0.68em;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                          "
+                        ></i>
+                        <i
+                          class="fas fa-star"
+                          style="
+                            font-size: 0.68em;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                          "
+                        ></i>
+                        <i
+                          class="fas fa-star"
+                          style="
+                            font-size: 0.68em;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                          "
+                        ></i>
+                      </span>
+                      <input
+                        type="range"
+                        oninput="drawStar(this)"
+                        value="0"
+                        step="1"
+                        min="0"
+                        max="10"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div id="EntireRow">
+                  <div id="plusInfoWrapper">
+                    <img
+                      id="themeLogo"
+                      src="/assets/img/themeImg/purplemood.png"
+                    />
+                    <p id="plusInfo">분위기가 특별해요</p>
+                  </div>
+                  <div class="rightStar">
+                    <span class="star">
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="
+                          font-size: 0.68em;
+                          margin-left: 2px;
+                          margin-right: 2px;
+                        "
+                      ></i>
+                      <span class="realStar">
+                        <i
+                          class="fas fa-star"
+                          style="
+                            font-size: 0.68em;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                          "
+                        ></i>
+                        <i
+                          class="fas fa-star"
+                          style="
+                            font-size: 0.68em;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                          "
+                        ></i>
+                        <i
+                          class="fas fa-star"
+                          style="
+                            font-size: 0.68em;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                          "
+                        ></i>
+                        <i
+                          class="fas fa-star"
+                          style="
+                            font-size: 0.68em;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                          "
+                        ></i>
+                        <i
+                          class="fas fa-star"
+                          style="
+                            font-size: 0.68em;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                          "
+                        ></i>
+                      </span>
+                      <input
+                        type="range"
+                        oninput="drawStar(this)"
+                        value="0"
+                        step="1"
+                        min="0"
+                        max="10"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="BottomBox">
+            <div id="purpleMessage">
+              식사를 하셨다면 음식 후기도 남겨주세요!
+            </div>
+            <div id="triangle-down"></div>
+            <button id="lineBtn" style="margin-bottom: 8px">
+              먹은 메뉴도 평가할래요
+            </button>
+
+            <button id="fillBtn">이대로 후기 등록할래요</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
